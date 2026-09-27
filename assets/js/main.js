@@ -1,310 +1,177 @@
-(function() {
+/* Varinder Singh — Portfolio
+   Small, dependency-free interactions: header state, mobile nav,
+   scroll reveal, image lightbox, copy-to-clipboard and footer year. */
+(function () {
   "use strict";
 
-  /**
-   * Apply .scrolled class to the body as the page is scrolled down
-   */
-  function toggleScrolled() {
-    const selectBody = document.querySelector('body');
-    const selectHeader = document.querySelector('#header');
-    if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
+  var doc = document;
+  var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* Header shadow once the page scrolls */
+  var header = doc.querySelector(".site-header");
+  function onScroll() {
+    if (header) header.classList.toggle("is-scrolled", window.scrollY > 8);
   }
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
 
-  document.addEventListener('scroll', toggleScrolled);
-  window.addEventListener('load', toggleScrolled);
-
-  /**
-   * Hero typed effect
-   */
-  const typed = document.querySelector('.typed');
-  if (typed) {
-    let typed_strings = typed.getAttribute('data-typed-items');
-    typed_strings = typed_strings.split(',');
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
+  /* Mobile navigation */
+  var toggle = doc.querySelector(".nav-toggle");
+  var nav = doc.getElementById("site-nav");
+  if (toggle && nav) {
+    var setOpen = function (open) {
+      nav.classList.toggle("is-open", open);
+      if (header) header.classList.toggle("nav-open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+      toggle.querySelector(".i-menu").style.display = open ? "none" : "";
+      toggle.querySelector(".i-close").style.display = open ? "" : "none";
+    };
+    toggle.addEventListener("click", function () {
+      setOpen(!nav.classList.contains("is-open"));
     });
-  }
-
-  /**
-   * Mobile nav toggle
-   */
-  const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
-
-  function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavToggleBtn.classList.toggle('bi-list');
-    mobileNavToggleBtn.classList.toggle('bi-x');
-  }
-  mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
-
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
+    nav.addEventListener("click", function (e) {
+      if (e.target.closest("a")) setOpen(false);
+    });
+    doc.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && nav.classList.contains("is-open")) {
+        setOpen(false);
+        toggle.focus();
       }
     });
-
-  });
-
-  /**
-   * Toggle mobile nav dropdowns
-   */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
-    });
-  });
-
-  /**
-   * Preloader
-   */
-  const preloader = document.querySelector('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove();
+    window.addEventListener("resize", function () {
+      if (window.innerWidth > 880) setOpen(false);
     });
   }
 
-  /**
-   * Scroll top button
-   */
-  let scrollTop = document.querySelector('.scroll-top');
-
-  function toggleScrollTop() {
-    if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
-    }
-  }
-  scrollTop.addEventListener('click', (e) => {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
-
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
-
-  /**
-   * Animation on scroll function and init
-   */
-  function aosInit() {
-    AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    });
-  }
-  window.addEventListener('load', aosInit);
-
-  document.addEventListener('DOMContentLoaded', () => {
-    /**
-     * GSAP Animations
-     */
-    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
-      gsap.registerPlugin(ScrollTrigger);
-
-      // Hero Section Animation
-      const heroSection = document.querySelector('#hero');
-      if (heroSection) {
-        gsap.from('.hero h2', { duration: 1, y: 50, opacity: 0, ease: 'power2.out', delay: 0.2 });
-        gsap.from('.hero p', { duration: 1, y: 50, opacity: 0, ease: 'power2.out', delay: 0.4 });
-        gsap.from('.hero .btn-get-started', { duration: 1, y: 50, opacity: 0, ease: 'power2.out', delay: 0.6 });
-      }
-
-      // Skills Section Animation
-      const skillsSection = document.querySelector('#skills');
-      if (skillsSection) {
-        gsap.utils.toArray('.skills-content .progress').forEach(progressEl => {
-          const bar = progressEl.querySelector('.progress-bar');
-          const valueEl = progressEl.querySelector('.val');
-          const targetWidth = bar.getAttribute('aria-valuenow');
-          const proxy = { value: 0 };
-
-          const tl = gsap.timeline({
-            scrollTrigger: {
-              trigger: progressEl,
-              start: 'top 90%',
-              toggleActions: 'play none none none',
-            }
-          });
-
-          tl.to(bar, {
-            width: `${targetWidth}%`,
-            duration: 1.5,
-            ease: 'power2.inOut'
-          })
-          .to(proxy, {
-            value: targetWidth,
-            duration: 1.5,
-            ease: 'power2.inOut',
-            onUpdate: () => {
-              valueEl.textContent = `${Math.round(proxy.value)}%`;
-            }
-          }, "-=1.5"); // Start at the same time as the bar animation
-        });
-      }
-
-      // Particles animation on hero section
-      const particlesContainer = document.querySelector('#tsparticles');
-      if (particlesContainer && typeof tsParticles !== 'undefined') {
-        tsParticles.load('tsparticles', {
-          interactivity: {
-            events: {
-              onHover: {
-                enable: true,
-                mode: 'grab' // Changed from 'bubble' to 'grab'
-              },
-              resize: true
-            },
-            modes: {
-              grab: {
-                distance: 150,
-                links: {
-                  opacity: 0.5
-                }
-              },
-              bubble: {
-                distance: 40,
-                duration: 2,
-                opacity: 1,
-                size: 3
-              }
-            }
-          },
-          particles: {
-            color: {
-              value: '#3ddcff' // Using the primary glow color
-            },
-            links: {
-              color: '#ffffff',
-              distance: 150,
-              enable: true, // Enabled links
-              opacity: 0.1,
-              width: 1
-            },
-            move: {
-              direction: 'none',
-              enable: true,
-              outModes: 'out',
-              random: false, // Set to false for more uniform movement
-              speed: 0.5, // Slowed down for a calmer effect
-              straight: false
-            },
-            number: {
-              density: {
-                enable: true,
-                area: 800
-              },
-              value: 80 // Reduced particle count for a cleaner look
-            },
-            opacity: {
-              value: {
-                min: 0.1,
-                max: 0.5 // Adjusted max opacity
-              },
-              animation: {
-                enable: true,
-                speed: 1,
-                sync: false
-              }
-            },
-            shape: {
-              type: 'circle'
-            },
-            size: {
-              value: {
-                min: 1,
-                max: 3
-              },
-              animation: {
-                enable: false, // Disabled size animation for consistency
-                speed: 2,
-                sync: false
-              }
-            }
-          },
-          detectRetina: true
-        });
-      }
-    }
-  });
-
-  /**
-   * Initiate Pure Counter
-   */
-  new PureCounter();
-
-  /**
-   * Init swiper sliders
-   */
-  function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
-      let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
-      );
-
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
-      } else {
-        new Swiper(swiperElement, config);
-      }
-    });
+  /* Reveal on scroll */
+  var revealEls = doc.querySelectorAll(".reveal");
+  if (!reduceMotion && "IntersectionObserver" in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
-  window.addEventListener("load", initSwiper);
+  /* Lightbox for case-study galleries */
+  var triggers = Array.prototype.slice.call(doc.querySelectorAll("[data-lightbox]"));
+  if (triggers.length) {
+    var box = doc.createElement("div");
+    box.className = "lightbox";
+    box.setAttribute("role", "dialog");
+    box.setAttribute("aria-modal", "true");
+    box.setAttribute("aria-label", "Screenshot viewer");
+    box.innerHTML =
+      '<button class="lb-btn lb-close" type="button" aria-label="Close">' + svg("x") + "</button>" +
+      '<button class="lb-btn lb-prev" type="button" aria-label="Previous screenshot">' + svg("left") + "</button>" +
+      '<button class="lb-btn lb-next" type="button" aria-label="Next screenshot">' + svg("right") + "</button>" +
+      "<figure><img alt=\"\"><figcaption></figcaption></figure>";
+    doc.body.appendChild(box);
 
-  /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
+    var img = box.querySelector("img");
+    var cap = box.querySelector("figcaption");
+    var index = 0;
+    var lastFocus = null;
 
-  /**
-   * Init isotope layout and filters
-   */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
-    let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
-    let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
-    let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
+    var show = function (i) {
+      index = (i + triggers.length) % triggers.length;
+      var t = triggers[index];
+      img.src = t.getAttribute("data-lightbox");
+      img.alt = t.getAttribute("data-caption") || "";
+      cap.textContent = t.getAttribute("data-caption") || "";
+    };
+    var open = function (i) {
+      lastFocus = doc.activeElement;
+      show(i);
+      box.classList.add("is-open");
+      doc.body.style.overflow = "hidden";
+      box.querySelector(".lb-close").focus();
+    };
+    var close = function () {
+      box.classList.remove("is-open");
+      doc.body.style.overflow = "";
+      if (lastFocus) lastFocus.focus();
+    };
 
-    let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
-      initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
-        itemSelector: '.isotope-item',
-        layoutMode: layout,
-        filter: filter,
-        sortBy: sort
+    triggers.forEach(function (t, i) {
+      t.addEventListener("click", function (e) {
+        e.preventDefault();
+        open(i);
       });
     });
-
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
-        isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
-        this.classList.add('filter-active');
-        initIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-        if (typeof aosInit === 'function') {
-          aosInit();
-        }
-      }, false);
+    box.querySelector(".lb-close").addEventListener("click", close);
+    box.querySelector(".lb-prev").addEventListener("click", function () { show(index - 1); });
+    box.querySelector(".lb-next").addEventListener("click", function () { show(index + 1); });
+    box.addEventListener("click", function (e) { if (e.target === box) close(); });
+    doc.addEventListener("keydown", function (e) {
+      if (!box.classList.contains("is-open")) return;
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowLeft") show(index - 1);
+      if (e.key === "ArrowRight") show(index + 1);
     });
+    if (triggers.length < 2) {
+      box.querySelector(".lb-prev").style.display = "none";
+      box.querySelector(".lb-next").style.display = "none";
+    }
+  }
 
+  function svg(name) {
+    var paths = {
+      x: '<path d="M18 6 6 18"/><path d="m6 6 12 12"/>',
+      left: '<path d="m15 18-6-6 6-6"/>',
+      right: '<path d="m9 18 6-6-6-6"/>'
+    };
+    return '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + paths[name] + "</svg>";
+  }
+
+  /* Copy email to clipboard */
+  var toast;
+  function showToast(message) {
+    if (!toast) {
+      toast = doc.createElement("div");
+      toast.className = "toast";
+      toast.setAttribute("role", "status");
+      toast.setAttribute("aria-live", "polite");
+      doc.body.appendChild(toast);
+    }
+    toast.innerHTML = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>' + message;
+    toast.classList.add("is-visible");
+    clearTimeout(showToast.t);
+    showToast.t = setTimeout(function () { toast.classList.remove("is-visible"); }, 2200);
+  }
+
+  doc.querySelectorAll("[data-copy]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var value = btn.getAttribute("data-copy");
+      var done = function () { showToast("Email copied to clipboard"); };
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(value).then(done, fallback);
+      } else {
+        fallback();
+      }
+      function fallback() {
+        var ta = doc.createElement("textarea");
+        ta.value = value;
+        ta.setAttribute("readonly", "");
+        ta.style.position = "absolute";
+        ta.style.left = "-9999px";
+        doc.body.appendChild(ta);
+        ta.select();
+        try { doc.execCommand("copy"); done(); } catch (err) { window.location.href = "mailto:" + value; }
+        doc.body.removeChild(ta);
+      }
+    });
   });
 
+  /* Current year in the footer */
+  doc.querySelectorAll("[data-year]").forEach(function (el) {
+    el.textContent = new Date().getFullYear();
+  });
 })();

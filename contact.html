@@ -1,291 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Contact - Varinder Singh</title>
-  <meta name="description" content="Contact Varinder Singh for web development projects or freelance opportunities.">
-  <meta name="keywords" content="Varinder Singh, contact, hire, web developer">
-
-  <!-- Open Graph / Social Preview -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Varinder Singh</title>
+  <meta name="description" content="Contact Varinder Singh for internships, entry-level full-stack roles or freelance projects. Email varindersinghofficial338@gmail.com.">
+  <meta name="author" content="Varinder Singh">
+  <meta name="theme-color" content="#090c13">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Contact - Varinder Singh">
-  <meta property="og:description" content="Contact Varinder Singh for web development projects or opportunities.">
-  <meta property="og:image" content="assets/img/professional.jpeg">
+  <meta property="og:site_name" content="Varinder Singh">
+  <meta property="og:title" content="Contact — Varinder Singh">
+  <meta property="og:description" content="Contact Varinder Singh for internships, entry-level full-stack roles or freelance projects. Email varindersinghofficial338@gmail.com.">
+  <meta property="og:image" content="assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-glow" aria-hidden="true"></div>
+  <div class="page-grid" aria-hidden="true"></div>
 
-<body class="contact-page">
-
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <h1 class="sitename">Varinder Singh</h1>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Varinder Singh — home">
+        <span class="brand-mark" aria-hidden="true">VS</span>
+        <span><span class="brand-name">Varinder Singh</span><span class="brand-role">Full-stack developer</span></span>
       </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="portfolio.html">Projects</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      <nav id="site-nav" class="nav" aria-label="Main">
+        <a href="portfolio.html">Work</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+        <a href="mailto:varindersinghofficial338@gmail.com?subject=Hello%20Varinder" class="btn btn-primary nav-mobile-cta"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg> Email me</a>
       </nav>
-
-      <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <div class="header-actions">
+        <a class="icon-btn" href="https://github.com/VarinderSingh68" target="_blank" rel="noopener" aria-label="GitHub profile"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+        <a class="btn btn-primary btn-sm header-cta" href="contact.html">Let&rsquo;s talk <svg class="icon icon-shift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        <button class="icon-btn nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+          <span class="i-menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg></span><span class="i-close" style="display:none"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
+        </button>
       </div>
-
     </div>
   </header>
 
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
-      <div id="tsparticles"></div>
+  <main id="main">
+    <section class="page-header">
       <div class="container">
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Contact</li>
-          </ol>
-        </nav>
-        <h1>Contact</h1>
+        <span class="eyebrow reveal">Contact</span>
+        <h1 class="reveal reveal-d1">Let&rsquo;s build something that works.</h1>
+        <p class="lead reveal reveal-d2">Hiring for an internship or entry-level role, or need a site that runs your business? Send me an email &mdash; I reply within 24&ndash;48 hours.</p>
       </div>
-    </div><!-- End Page Title -->
+    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-5">
-
-            <div class="info-wrap">
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                <i class="bi bi-geo-alt flex-shrink-0"></i>
-                <div>
-                  <h3>Location</h3>
-                  <p>Mohali, Punjab, India</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                <i class="bi bi-envelope flex-shrink-0"></i>
-                <div>
-                  <h3>Email Us</h3>
-                  <p>varindersinghofficial338@gmail.com</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <iframe src="https://www.google.com/maps?q=Mohali,+Punjab,+India&output=embed" width="100%" height="270" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Map showing Mohali, Punjab, India"></iframe>
-            </div>
-          </div>
-
-          <div class="col-lg-7">
-            <!-- Powered by Formspree (https://formspree.io) — Render's static hosting can't run PHP, -->
-            <!-- so this replaces the original forms/contact.php handler. Replace YOUR_FORM_ID below -->
-            <!-- with the ID from your Formspree form before deploying. -->
-            <form action="https://formspree.io/f/YOUR_FORM_ID" method="post" id="contact-form" class="contact-form-formspree" data-aos="fade-up" data-aos-delay="200">
-              <input type="hidden" name="_subject" value="New portfolio contact form submission">
-              <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <label for="name-field" class="pb-2">Your Name</label>
-                  <input type="text" name="name" id="name-field" class="form-control" required="">
-                </div>
-
-                <div class="col-md-6">
-                  <label for="email-field" class="pb-2">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="subject-field" class="pb-2">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
-                </div>
-
-                <div class="col-md-12">
-                  <label for="message-field" class="pb-2">Message</label>
-                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div><!-- End Contact Form -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Contact Section -->
-
-    <!-- FAQ Section -->
-    <section id="faq" class="faq section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Frequently Asked Questions</h2>
-      </div>
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-
-            <div class="faq-item">
-              <button type="button" class="faq-question" aria-expanded="false">
-                Are you available for internships or entry-level roles?
-                <i class="bi bi-chevron-down"></i>
-              </button>
-              <div class="faq-answer">
-                <p>Yes. I'm currently pursuing my B.C.A. and actively looking for internships and entry-level opportunities where I can contribute and keep learning.</p>
-              </div>
-            </div><!-- End FAQ Item -->
-
-            <div class="faq-item">
-              <button type="button" class="faq-question" aria-expanded="false">
-                What's your tech stack?
-                <i class="bi bi-chevron-down"></i>
-              </button>
-              <div class="faq-answer">
-                <p>HTML, CSS, JavaScript and React on the front end; Python (Django, Flask) and Java (Spring, Hibernate) on the back end; MySQL, PostgreSQL and MongoDB for data. See the full breakdown on my <a href="about.html">About</a> and <a href="resume.html">Resume</a> pages.</p>
-              </div>
-            </div><!-- End FAQ Item -->
-
-            <div class="faq-item">
-              <button type="button" class="faq-question" aria-expanded="false">
-                Do you work remotely or on-site?
-                <i class="bi bi-chevron-down"></i>
-              </button>
-              <div class="faq-answer">
-                <p>I'm open to remote, hybrid, or on-site opportunities &mdash; whatever works best for the team.</p>
-              </div>
-            </div><!-- End FAQ Item -->
-
-            <div class="faq-item">
-              <button type="button" class="faq-question" aria-expanded="false">
-                What's the best way to reach you?
-                <i class="bi bi-chevron-down"></i>
-              </button>
-              <div class="faq-answer">
-                <p>The contact form above or email works best. I typically reply within 24&ndash;48 hours.</p>
-              </div>
-            </div><!-- End FAQ Item -->
-
+    <section class="section" style="padding-top:8px;border-top:0">
+      <div class="container contact-grid">
+        <div class="contact-card reveal">
+          <span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></span>
+          <h2>Email me directly</h2>
+          <p>The fastest way to reach me. Tell me about the role or the project.</p>
+          <a class="email-display" href="mailto:varindersinghofficial338@gmail.com?subject=Hello%20Varinder">varindersinghofficial338@gmail.com</a>
+          <div class="btn-row">
+            <a class="btn btn-primary btn-lg" href="mailto:varindersinghofficial338@gmail.com?subject=Hello%20Varinder"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg> Write an email</a>
+            <button class="btn btn-ghost btn-lg" type="button" data-copy="varindersinghofficial338@gmail.com"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg> Copy address</button>
           </div>
         </div>
+        <div class="side-stack">
+          <div class="side-card reveal reveal-d1"><span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg></span><div><strong>Mohali, Punjab, India</strong><span>Open to remote, hybrid or on-site work.</span></div></div>
+          <a class="side-card reveal reveal-d2" href="https://github.com/VarinderSingh68" target="_blank" rel="noopener"><span class="cap-icon"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></span><div><strong>GitHub</strong><span>github.com/VarinderSingh68</span></div></a>
+          <a class="side-card reveal reveal-d3" href="assets/Varinder-Singh-Resume.pdf" download><span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><div><strong>Resume (PDF)</strong><span>One page &mdash; experience, projects and skills.</span></div></a>
+        </div>
       </div>
-    </section><!-- /FAQ Section -->
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2>Questions people ask</h2>
+        </div>
+        <div class="faq">
+          <details class="reveal">
+            <summary>Are you available for internships or entry-level roles?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <div class="faq-body">Yes. I&rsquo;m in my B.C.A. (graduating 2027) and actively looking for internships and entry-level full-stack roles &mdash; remote, hybrid or on-site.</div>
+          </details>
+          <details class="reveal">
+            <summary>Can you build a website or ordering system for my business?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <div class="faq-body">Yes &mdash; that&rsquo;s exactly what I did for <a href="portfolio-details-premium-cakes.html">Well Baked Bakery</a>. I build storefronts, booking systems and admin panels, handle the launch (domain, hosting, SSL, data migration), and support the site afterwards.</div>
+          </details>
+          <details class="reveal">
+            <summary>What&rsquo;s your tech stack?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <div class="faq-body">In production: JavaScript, Node.js, Express and PostgreSQL on a Linux server with Nginx and PM2. In my projects I&rsquo;ve also used React, Vite, Python with FastAPI, PHP, Tailwind CSS and Alpine.js. The full breakdown is on my <a href="resume.html">resume</a>.</div>
+          </details>
+          <details class="reveal">
+            <summary>How long does a project take?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <div class="faq-body">It depends on scope. After a short conversation about how your business works today, I&rsquo;ll give you a clear plan and timeline before any work starts.</div>
+          </details>
+          <details class="reveal">
+            <summary>What&rsquo;s the best way to reach you?<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+            <div class="faq-body">Email <a href="mailto:varindersinghofficial338@gmail.com?subject=Hello%20Varinder">varindersinghofficial338@gmail.com</a>. I usually reply within 24&ndash;48 hours.</div>
+          </details>
+        </div>
+      </div>
+    </section>
 
   </main>
 
-  <footer id="footer" class="footer">
+  <footer class="site-footer">
     <div class="container">
-      <div class="copyright text-center ">
-        <p> <span></span> <strong class="px-1 sitename"></strong> <span><br></span></p>
-      </div>
-      <div class="social-links d-flex justify-content-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Varinder Singh &middot; Designed and hand-coded in HTML, CSS &amp; JavaScript.</span>
+        <div class="footer-links">
+          <a href="portfolio.html">Work</a>
+          <a href="about.html">About</a>
+          <a href="resume.html">Resume</a>
+          <a href="contact.html">Contact</a>
+          <span class="footer-social">
+            <a class="icon-btn" href="https://github.com/VarinderSingh68" target="_blank" rel="noopener" aria-label="GitHub profile"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+            <a class="icon-btn" href="mailto:varindersinghofficial338@gmail.com?subject=Hello%20Varinder" aria-label="Email Varinder"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></a>
+          </span>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.12.0/tsparticles.slim.bundle.min.js"></script>
-
-  <!-- GSAP Core and ScrollTrigger Plugin -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-  <!-- Contact Form (Formspree) -->
-  <script src="assets/js/contact-form.js"></script>
-
-  <!-- FAQ Accordion -->
-  <script>
-    document.querySelectorAll('.faq-item .faq-question').forEach(function (question) {
-      question.addEventListener('click', function () {
-        const item = question.closest('.faq-item');
-        const answer = item.querySelector('.faq-answer');
-        const isActive = item.classList.contains('faq-active');
-
-        document.querySelectorAll('.faq-item.faq-active').forEach(function (openItem) {
-          if (openItem !== item) {
-            openItem.classList.remove('faq-active');
-            openItem.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-            openItem.querySelector('.faq-answer').style.maxHeight = null;
-          }
-        });
-
-        if (isActive) {
-          item.classList.remove('faq-active');
-          question.setAttribute('aria-expanded', 'false');
-          answer.style.maxHeight = null;
-        } else {
-          item.classList.add('faq-active');
-          question.setAttribute('aria-expanded', 'true');
-          answer.style.maxHeight = answer.scrollHeight + 'px';
-        }
-      });
-    });
-  </script>
-
+  <script src="assets/js/main.js" defer></script>
 </body>
-
 </html>

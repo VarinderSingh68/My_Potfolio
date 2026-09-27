@@ -1,316 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Projects - Varinder Singh</title>
-  <meta name="description" content="Client projects sold and live in production, plus learning projects by Varinder Singh.">
-  <meta name="keywords" content="Varinder Singh, projects, portfolio, web development, React, Python">
-
-  <!-- Open Graph / Social Preview -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Work — Varinder Singh</title>
+  <meta name="description" content="Client work and learning projects by Varinder Singh: a live ordering platform for a bakery, plus six full-stack apps with admin panels.">
+  <meta name="author" content="Varinder Singh">
+  <meta name="theme-color" content="#090c13">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Projects - Varinder Singh">
-  <meta property="og:description" content="Client projects sold and live in production, plus learning projects by Varinder Singh.">
-  <meta property="og:image" content="assets/img/professional.jpeg">
+  <meta property="og:site_name" content="Varinder Singh">
+  <meta property="og:title" content="Work — Varinder Singh">
+  <meta property="og:description" content="Client work and learning projects by Varinder Singh: a live ordering platform for a bakery, plus six full-stack apps with admin panels.">
+  <meta property="og:image" content="assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-glow" aria-hidden="true"></div>
+  <div class="page-grid" aria-hidden="true"></div>
 
-<body class="portfolio-page">
-
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <h1 class="sitename">Varinder Singh</h1>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Varinder Singh — home">
+        <span class="brand-mark" aria-hidden="true">VS</span>
+        <span><span class="brand-name">Varinder Singh</span><span class="brand-role">Full-stack developer</span></span>
       </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="portfolio.html" class="active">Projects</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      <nav id="site-nav" class="nav" aria-label="Main">
+        <a href="portfolio.html" aria-current="page">Work</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <a href="mailto:varindersinghofficial338@gmail.com?subject=Hello%20Varinder" class="btn btn-primary nav-mobile-cta"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg> Email me</a>
       </nav>
-
-      <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <div class="header-actions">
+        <a class="icon-btn" href="https://github.com/VarinderSingh68" target="_blank" rel="noopener" aria-label="GitHub profile"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+        <a class="btn btn-primary btn-sm header-cta" href="contact.html">Let&rsquo;s talk <svg class="icon icon-shift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        <button class="icon-btn nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+          <span class="i-menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg></span><span class="i-close" style="display:none"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
+        </button>
       </div>
-
     </div>
   </header>
 
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
+  <main id="main">
+    <section class="page-header">
       <div class="container">
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">Projects</li>
-          </ol>
+        <span class="eyebrow reveal">Work</span>
+        <h1 class="reveal reveal-d1">Projects that ship &mdash; for clients and for practice</h1>
+        <p class="lead reveal reveal-d2">One client platform running in production, plus six full-stack apps I built to learn &mdash; each with a real backend and an admin panel.</p>
+        <nav class="jump-nav reveal reveal-d3" aria-label="Project groups">
+          <a href="#client" class="is-gold"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m16 9-5.5 5.5L8 12"/></svg> Client work <span class="count">1</span></a>
+          <a href="#learning"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg> Learning projects <span class="count">6</span></a>
         </nav>
-        <h1>Projects</h1>
       </div>
-    </div><!-- End Page Title -->
+    </section>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <nav class="project-group-nav" aria-label="Project categories">
-          <a href="#client-projects" class="nav-client"><i class="bi bi-patch-check-fill"></i> Client Projects <span class="count">1</span></a>
-          <a href="#learning-projects"><i class="bi bi-lightbulb"></i> Learning Projects <span class="count">6</span></a>
-        </nav>
-
-        <!-- Client Projects (Sold) -->
-        <div id="client-projects" class="project-group project-group-client">
-          <div class="project-group-header">
-            <span class="group-eyebrow"><i class="bi bi-patch-check-fill"></i> Client Work &middot; Sold</span>
-            <h2>Client Projects</h2>
-            <p>Real products built for paying clients &mdash; sold, deployed to production and in daily use by real customers.</p>
-          </div>
-
-        <div class="row g-0 project-spotlight is-client align-items-stretch">
-          <div class="col-lg-6">
-            <img src="assets/img/portfolio/premium-cakes/premium-cakes-1.jpg" class="spotlight-img spotlight-img-left" alt="Premium Cakes storefront homepage on chandigarhcakeclub.club" loading="lazy">
-          </div>
-          <div class="col-lg-6">
-            <div class="spotlight-content">
-              <div class="spotlight-badges">
-                <span class="sold-badge"><i class="bi bi-bag-check-fill"></i> Sold</span>
-                <span class="live-badge"><span class="live-dot"></span> Live in production</span>
-              </div>
-              <span class="spotlight-tag">Full-Stack E-commerce Platform</span>
-              <h3>Premium Cakes</h3>
-              <p class="spotlight-client">Built for Well Baked Bakery</p>
-              <p>A production online ordering platform that replaced manual phone/WhatsApp orders with a self-service storefront and a no-code admin dashboard the owner runs day to day.</p>
-              <ul>
-                <li>Live menu of 200+ products across 25+ categories with size/weight pricing, cart and checkout</li>
-                <li>Automatic PDF invoices plus WhatsApp and email order alerts to the owner</li>
-                <li>Password-protected admin for products, banners, coupons, orders and store settings</li>
-              </ul>
-              <div class="tech-chips">
-                <span>Vanilla JS</span><span>Node.js / Express</span><span>PostgreSQL</span><span>Nginx + PM2</span><span>Linux VPS</span>
-              </div>
-              <div class="spotlight-links">
-                <a href="https://chandigarhcakeclub.club/" target="_blank" rel="noopener" class="btn-get-started btn-solid">Live Site</a>
-                <a href="portfolio-details-premium-cakes.html" class="btn-get-started">Case Study</a>
-              </div>
+    <section class="section" style="padding-top:24px;border-top:0">
+      <div class="container">
+        <div id="client" class="group">
+          <div class="group-head reveal">
+            <div>
+              <span class="eyebrow gold">Client work &middot; Sold</span>
+              <h2>Built for paying clients</h2>
+              <p>Real products, sold and running in production for real customers.</p>
             </div>
           </div>
-        </div>
-        </div><!-- /Client Projects -->
-
-        <!-- Learning Projects -->
-        <div id="learning-projects" class="project-group">
-          <div class="project-group-header">
-            <span class="group-eyebrow"><i class="bi bi-lightbulb"></i> Learning &amp; Practice</span>
-            <h2>Learning Projects</h2>
-            <p>Projects I built to learn and experiment with full-stack patterns, admin dashboards and AI tooling &mdash; each one running as a live demo.</p>
+        <article class="feature-card is-client reveal">
+          <div class="feature-media">
+            <div class="frame "><div class="frame-bar"><span class="frame-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="frame-url">chandigarhcakeclub.club</span></div><div class="frame-img"><img src="assets/img/work/premium-cakes-1.webp" alt="Premium Cakes storefront on chandigarhcakeclub.club" width="1440" height="900" loading="lazy" decoding="async"></div></div>
+            <div class="phone"><img src="assets/img/work/premium-cakes-mobile.webp" alt="Premium Cakes menu on a phone" width="360" height="738" loading="lazy" decoding="async"></div>
+            <span class="media-note"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg> Desktop &amp; mobile</span>
           </div>
-
-        <div class="row g-0 project-spotlight align-items-stretch">
-          <div class="col-lg-6">
-            <img src="assets/img/portfolio/bakery/bakery-1.jpg" class="spotlight-img" alt="Bakery Business Growth Agent storefront homepage" loading="lazy">
-          </div>
-          <div class="col-lg-6">
-            <div class="spotlight-content">
-              <span class="spotlight-tag">Full-Stack Web App</span>
-              <h3>Bakery Business Growth Agent</h3>
-              <p>A complete e-commerce platform for a bakery business &mdash; a customer storefront plus a full admin dashboard to run it.</p>
-              <ul>
-                <li>Product catalog with size/weight variants, cart, wishlist and a live chat widget</li>
-                <li>Admin panel to manage orders, products, categories, banners and offers</li>
-                <li>Built-in analytics: page views, cart adds, and exit-intent A/B testing</li>
-              </ul>
-              <div class="spotlight-links">
-                <a href="https://bakery-frontend-xiyt.onrender.com" target="_blank" rel="noopener" class="btn-get-started btn-solid">Live Site</a>
-                <a href="portfolio-details-bakery.html" class="btn-get-started">Case Study</a>
-              </div>
+          <div class="feature-body">
+            <div class="badges">
+              <span class="badge badge-sold"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m16 9-5.5 5.5L8 12"/></svg> Client project &middot; Sold</span>
+              <span class="badge badge-live"><span class="dot dot-pulse"></span> Live in production</span>
+            </div>
+            <h3>Premium Cakes</h3>
+            <p class="feature-client">Built for Well Baked Bakery</p>
+            <p>A production online ordering platform that replaced phone and WhatsApp orders for a local bakery — with a no-code admin panel the owner runs every day.</p>
+            <ul class="check-list"><li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span>Live menu of 200+ products across 25+ categories with size- and weight-based pricing</span></li><li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span>Every order generates a PDF invoice and alerts the owner on WhatsApp and email</span></li><li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span>No-code admin for products, banners, coupons, orders and store settings</span></li></ul>
+            <div class="tags"><span class="tag">JavaScript</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">PostgreSQL</span><span class="tag">Nginx</span><span class="tag">PM2</span><span class="tag">Linux VPS</span></div>
+            <div class="btn-row">
+              <a class="btn btn-primary" href="portfolio-details-premium-cakes.html">Read the case study <svg class="icon icon-shift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+              <a class="btn btn-ghost" href="https://chandigarhcakeclub.club/" target="_blank" rel="noopener">Visit live site <svg class="icon icon-diag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
             </div>
           </div>
+        </article>
         </div>
 
-        <div class="row g-0 project-spotlight align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="150">
-          <div class="col-lg-6 order-lg-2">
-            <img src="assets/img/portfolio/dental/dental-1.jpg" class="spotlight-img" alt="Doctor Business Growth Agent - Dr. Rana Dental Clinic homepage" loading="lazy">
-          </div>
-          <div class="col-lg-6 order-lg-1">
-            <div class="spotlight-content">
-              <span class="spotlight-tag">Full-Stack Web App</span>
-              <h3>Doctor Business Growth Agent</h3>
-              <p>A clinic management platform &mdash; a patient-facing booking site plus an admin dashboard to run the practice, demoed here as "Dr. Rana Dental Clinic."</p>
-              <ul>
-                <li>Services page with transparent, per-treatment pricing</li>
-                <li>Appointment booking with a calendar and time-slot picker</li>
-                <li>Live backend status indicator, patient portal and chat widget</li>
-              </ul>
-              <div class="spotlight-links">
-                <a href="https://stellar-care-ui.onrender.com" target="_blank" rel="noopener" class="btn-get-started btn-solid">Live Site</a>
-                <a href="portfolio-details-dental.html" class="btn-get-started">Case Study</a>
-              </div>
+        <div id="learning" class="group">
+          <div class="group-head reveal">
+            <div>
+              <span class="eyebrow">Learning &amp; practice</span>
+              <h2>Built to learn &mdash; properly</h2>
+              <p>Full products, not tutorials: each has a customer-facing site, a backend and an admin panel.</p>
             </div>
           </div>
-        </div>
-
-        <div class="row g-0 project-spotlight align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="150">
-          <div class="col-lg-6">
-            <img src="assets/img/portfolio/salon/salon-1.jpg" class="spotlight-img" alt="Salon Business Growth Agent - Aura salon homepage" loading="lazy">
+          <div class="callout reveal">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg>
+            <div><strong>The Business Growth Agent series.</strong> Five of these share one idea &mdash; a site that wins customers plus an admin panel that helps the owner grow &mdash; each built for a different industry, and often with a different stack (React, Vite, Python&rsquo;s FastAPI, PHP with Tailwind and Alpine.js) so I learned each one for real.</div>
           </div>
-          <div class="col-lg-6">
-            <div class="spotlight-content">
-              <span class="spotlight-tag">Full-Stack Web App</span>
-              <h3>Salon Business Growth Agent</h3>
-              <p>A booking and e-commerce platform for a luxury salon &mdash; treatment booking, a beauty store, and an admin panel to run it all, demoed here as "Aura."</p>
-              <ul>
-                <li>Signature treatments catalog with booking on every service</li>
-                <li>Integrated beauty store with cart and checkout</li>
-                <li>Admin dashboard for services, products, clients and appointments</li>
-              </ul>
-              <div class="spotlight-links">
-                <a href="https://salon-business-growth-agent.onrender.com" target="_blank" rel="noopener" class="btn-get-started btn-solid">Live Site</a>
-                <a href="portfolio-details-salon.html" class="btn-get-started">Case Study</a>
+          <div class="card-grid">
+          <article class="project-card reveal">
+            <div class="card-media"><div class="frame "><div class="frame-bar"><span class="frame-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="frame-url">pet-shop-business-growth-agent.onrender.com</span></div><div class="frame-img"><img src="assets/img/work/petshop-1.webp" alt="Happy Tails Pet Store — Storefront homepage" width="1600" height="941" loading="lazy" decoding="async"></div></div></div>
+            <div class="card-body">
+              <div class="card-kicker"><span>Growth Agent · Retail</span><span class="badge badge-live"><span class="dot"></span> Live demo</span></div>
+              <h3><a href="portfolio-details-petshop.html">Pet Shop Business Growth Agent</a></h3>
+              <p>A pet store with shop-by-pet browsing, real grooming and vet booking slots, and a “Growth Copilot” that spots reorder and upsell opportunities.</p>
+              <div class="tags"><span class="tag">PHP 8</span><span class="tag">Tailwind CSS</span><span class="tag">Alpine.js</span><span class="tag">Apache</span></div>
+              <div class="card-links">
+                <a class="link-arrow" href="portfolio-details-petshop.html">Case study <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                <a class="muted-link" href="https://pet-shop-business-growth-agent.onrender.com" target="_blank" rel="noopener">Live demo <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div class="row g-0 project-spotlight align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="150">
-          <div class="col-lg-6 order-lg-2">
-            <img src="assets/img/portfolio/gym/gym-1.jpg" class="spotlight-img" alt="Gym Business Growth Agent - Volt Fitness homepage" loading="lazy">
-          </div>
-          <div class="col-lg-6 order-lg-1">
-            <div class="spotlight-content">
-              <span class="spotlight-tag">Full-Stack Web App</span>
-              <h3>Gym Business Growth Agent</h3>
-              <p>A membership and coaching platform for a fitness club &mdash; programs, trainers, and tiered pricing, demoed here as "Volt Fitness."</p>
-              <ul>
-                <li>Live trainer cards, membership stats and progress bars</li>
-                <li>Monthly/yearly pricing plans with a savings toggle</li>
-                <li>Backend-verified admin login for the management panel</li>
-              </ul>
-              <div class="spotlight-links">
-                <a href="https://gym-business-growth-agent.onrender.com" target="_blank" rel="noopener" class="btn-get-started btn-solid">Live Site</a>
-                <a href="portfolio-details-gym.html" class="btn-get-started">Case Study</a>
+          </article>
+          <article class="project-card reveal reveal-d1">
+            <div class="card-media"><div class="frame "><div class="frame-bar"><span class="frame-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="frame-url">stellar-care-ui.onrender.com</span></div><div class="frame-img"><img src="assets/img/work/dental-1.webp" alt="Dr. Rana Dental Clinic — Clinic homepage" width="1582" height="904" loading="lazy" decoding="async"></div></div></div>
+            <div class="card-body">
+              <div class="card-kicker"><span>Growth Agent · Clinic</span><span class="badge badge-live"><span class="dot"></span> Live demo</span></div>
+              <h3><a href="portfolio-details-dental.html">Doctor Business Growth Agent</a></h3>
+              <p>A patient-facing clinic site with transparent treatment pricing and calendar booking, backed by a separate API and an admin dashboard.</p>
+              <div class="tags"><span class="tag">React</span><span class="tag">Vite</span><span class="tag">REST API</span></div>
+              <div class="card-links">
+                <a class="link-arrow" href="portfolio-details-dental.html">Case study <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                <a class="muted-link" href="https://stellar-care-ui.onrender.com" target="_blank" rel="noopener">Live demo <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div class="row g-0 project-spotlight align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="150">
-          <div class="col-lg-6">
-            <img src="assets/img/portfolio/aria/aria-1.jpg" class="spotlight-img" alt="ARIA - Advanced Reasoning and Integration Assistant chat interface" loading="lazy">
-          </div>
-          <div class="col-lg-6">
-            <div class="spotlight-content">
-              <span class="spotlight-tag">AI Agent Platform</span>
-              <h3>AI Agent (ARIA Engine)</h3>
-              <p>A super-agent control center: one chat interface that reasons about a request and picks the right tool to actually do it.</p>
-              <ul>
-                <li>Built-in tools for data viz, document drafting, script writing/execution, and email comms</li>
-                <li>Knowledge base via file upload or URL ingestion, plus a Dev Mode for IT users</li>
-                <li>Manual tool override when you don't want to leave it to "Auto"</li>
-              </ul>
-              <div class="spotlight-links">
-                <a href="https://ai-agent-tw1l.onrender.com" target="_blank" rel="noopener" class="btn-get-started btn-solid">Live Site</a>
-                <a href="portfolio-details-aria.html" class="btn-get-started">Case Study</a>
+          </article>
+          <article class="project-card reveal">
+            <div class="card-media"><div class="frame "><div class="frame-bar"><span class="frame-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="frame-url">bakery-frontend-xiyt.onrender.com</span></div><div class="frame-img"><img src="assets/img/work/bakery-1.webp" alt="Artisan Bakery — Storefront homepage" width="1600" height="1000" loading="lazy" decoding="async"></div></div></div>
+            <div class="card-body">
+              <div class="card-kicker"><span>Growth Agent · Bakery</span><span class="badge badge-live"><span class="dot"></span> Live demo</span></div>
+              <h3><a href="portfolio-details-bakery.html">Bakery Business Growth Agent</a></h3>
+              <p>A React storefront on a Python FastAPI backend, with variants, cart and live chat, plus an admin panel with analytics and exit-intent A/B testing.</p>
+              <div class="tags"><span class="tag">React</span><span class="tag">FastAPI (Python)</span><span class="tag">PostHog</span></div>
+              <div class="card-links">
+                <a class="link-arrow" href="portfolio-details-bakery.html">Case study <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                <a class="muted-link" href="https://bakery-frontend-xiyt.onrender.com" target="_blank" rel="noopener">Live demo <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
               </div>
             </div>
-          </div>
-        </div>
-
-        <div class="row g-0 project-spotlight align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="150">
-          <div class="col-lg-6 order-lg-2">
-            <img src="assets/img/portfolio/petshop/petshop-1.jpg" class="spotlight-img" alt="Pet Shop Business Growth Agent - Happy Tails homepage" loading="lazy">
-          </div>
-          <div class="col-lg-6 order-lg-1">
-            <div class="spotlight-content">
-              <span class="spotlight-tag">Full-Stack Web App</span>
-              <h3>Pet Shop Business Growth Agent</h3>
-              <p>An e-commerce platform for a pet supply business &mdash; a shoppable storefront plus an AI-assisted admin panel, demoed here as "Happy Tails."</p>
-              <ul>
-                <li>Shop by pet type, with pet profiles that power reorder reminders</li>
-                <li>Real appointment booking for grooming, boarding and vet visits</li>
-                <li>"Growth Copilot" admin insights that surface reorder &amp; upsell opportunities from order history</li>
-              </ul>
-              <div class="spotlight-links">
-                <a href="https://pet-shop-business-growth-agent.onrender.com" target="_blank" rel="noopener" class="btn-get-started btn-solid">Live Site</a>
-                <a href="portfolio-details-petshop.html" class="btn-get-started">Case Study</a>
+          </article>
+          <article class="project-card reveal reveal-d1">
+            <div class="card-media"><div class="frame "><div class="frame-bar"><span class="frame-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="frame-url">gym-business-growth-agent.onrender.com</span></div><div class="frame-img"><img src="assets/img/work/gym-1.webp" alt="Volt Fitness — Homepage with trainer previews and membership stats" width="1600" height="1000" loading="lazy" decoding="async"></div></div></div>
+            <div class="card-body">
+              <div class="card-kicker"><span>Growth Agent · Fitness</span><span class="badge badge-live"><span class="dot"></span> Live demo</span></div>
+              <h3><a href="portfolio-details-gym.html">Gym Business Growth Agent</a></h3>
+              <p>A conversion-focused gym site with trainer previews, monthly/yearly pricing with a savings toggle, and a server-verified admin login.</p>
+              <div class="tags"><span class="tag">React</span><span class="tag">REST API</span></div>
+              <div class="card-links">
+                <a class="link-arrow" href="portfolio-details-gym.html">Case study <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                <a class="muted-link" href="https://gym-business-growth-agent.onrender.com" target="_blank" rel="noopener">Live demo <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
               </div>
             </div>
+          </article>
+          <article class="project-card reveal">
+            <div class="card-media"><div class="frame "><div class="frame-bar"><span class="frame-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="frame-url" aria-hidden="true"></span></div><div class="frame-img"><img src="assets/img/work/salon-1.webp" alt="Aura Salon — Salon homepage" width="1600" height="1000" loading="lazy" decoding="async"></div></div></div>
+            <div class="card-body">
+              <div class="card-kicker"><span>Growth Agent · Salon</span><span class="badge badge-off"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.94 5.274A7 7 0 0 1 15.71 10h1.79a4.5 4.5 0 0 1 4.222 6.057"/><path d="M18.796 18.81A4.5 4.5 0 0 1 17.5 19H9A7 7 0 0 1 5.79 5.78"/><path d="m2 2 20 20"/></svg> Demo offline</span></div>
+              <h3><a href="portfolio-details-salon.html">Salon Business Growth Agent</a></h3>
+              <p>A luxury salon site with bookable treatments, an integrated beauty store, and an admin panel covering staff, clients, coupons and SEO.</p>
+              <div class="tags"><span class="tag">Bookings</span><span class="tag">E-commerce</span><span class="tag">Admin CMS</span></div>
+              <div class="card-links">
+                <a class="link-arrow" href="portfolio-details-salon.html">Case study <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                <span class="offline"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.94 5.274A7 7 0 0 1 15.71 10h1.79a4.5 4.5 0 0 1 4.222 6.057"/><path d="M18.796 18.81A4.5 4.5 0 0 1 17.5 19H9A7 7 0 0 1 5.79 5.78"/><path d="m2 2 20 20"/></svg> Screenshots only</span>
+              </div>
+            </div>
+          </article>
+          <article class="project-card reveal reveal-d1">
+            <div class="card-media"><div class="frame "><div class="frame-bar"><span class="frame-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="frame-url" aria-hidden="true"></span></div><div class="frame-img"><img src="assets/img/work/aria-1.webp" alt="ARIA — ARIA chat interface" width="1600" height="776" loading="lazy" decoding="async"></div></div></div>
+            <div class="card-body">
+              <div class="card-kicker"><span>AI tooling</span><span class="badge badge-off"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.94 5.274A7 7 0 0 1 15.71 10h1.79a4.5 4.5 0 0 1 4.222 6.057"/><path d="M18.796 18.81A4.5 4.5 0 0 1 17.5 19H9A7 7 0 0 1 5.79 5.78"/><path d="m2 2 20 20"/></svg> Demo offline</span></div>
+              <h3><a href="portfolio-details-aria.html">ARIA — AI agent platform</a></h3>
+              <p>One chat interface that routes requests to the right tool — charts, documents, scripts or messages — and answers from your own files.</p>
+              <div class="tags"><span class="tag">AI tool routing</span><span class="tag">Document ingestion</span><span class="tag">Chat UI</span></div>
+              <div class="card-links">
+                <a class="link-arrow" href="portfolio-details-aria.html">Case study <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+                <span class="offline"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.94 5.274A7 7 0 0 1 15.71 10h1.79a4.5 4.5 0 0 1 4.222 6.057"/><path d="M18.796 18.81A4.5 4.5 0 0 1 17.5 19H9A7 7 0 0 1 5.79 5.78"/><path d="m2 2 20 20"/></svg> Screenshots only</span>
+              </div>
+            </div>
+          </article>
           </div>
+          <p class="note"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg> Live demos run on free hosting and can take up to a minute to wake up on the first visit.</p>
         </div>
-
-        </div><!-- /Learning Projects -->
-
-        <p class="projects-note" data-aos="fade-up" data-aos-delay="200">More projects in progress &mdash; check back soon.</p>
       </div>
-    </section><!-- /Portfolio Section -->
+    </section>
 
   </main>
 
-  <footer id="footer" class="footer">
-    <div class="container">
-      <div class="copyright text-center ">
-        <p> <span></span> <strong class="px-1 sitename"></strong> <span><br></span></p>
+  <footer class="site-footer">
+    <section class="footer-cta">
+      <div class="container">
+        <div class="cta reveal">
+          <div class="cta-inner">
+            <div>
+              <span class="eyebrow">Open to work</span>
+              <h2>Hiring an intern, or need a site that runs your business?</h2>
+              <p>I&rsquo;m available for internships, entry-level roles and freelance projects. Tell me what you&rsquo;re building &mdash; I reply within 24&ndash;48 hours.</p>
+            </div>
+            <div class="btn-row">
+              <a class="btn btn-primary btn-lg" href="mailto:varindersinghofficial338@gmail.com?subject=Hello%20Varinder"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg> Email me</a>
+              <a class="btn btn-ghost btn-lg" href="assets/Varinder-Singh-Resume.pdf" download><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg> Resume</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="social-links d-flex justify-content-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </section>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Varinder Singh &middot; Designed and hand-coded in HTML, CSS &amp; JavaScript.</span>
+        <div class="footer-links">
+          <a href="portfolio.html">Work</a>
+          <a href="about.html">About</a>
+          <a href="resume.html">Resume</a>
+          <a href="contact.html">Contact</a>
+          <span class="footer-social">
+            <a class="icon-btn" href="https://github.com/VarinderSingh68" target="_blank" rel="noopener" aria-label="GitHub profile"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+            <a class="icon-btn" href="mailto:varindersinghofficial338@gmail.com?subject=Hello%20Varinder" aria-label="Email Varinder"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></a>
+          </span>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.12.0/tsparticles.slim.bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/main.js" defer></script>
 </body>
-
 </html>

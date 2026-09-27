@@ -1,0 +1,14 @@
+# Local AI / editor tool state — keep private, never publish
+.refact/
+.claude/
+Claude outputs/
+.vscode/
+
+# Personal documents and large local files
+*.docx
+interface.png
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini

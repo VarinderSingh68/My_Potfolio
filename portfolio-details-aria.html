@@ -1,164 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>AI Agent (ARIA Engine) - Varinder Singh</title>
-  <meta name="description" content="ARIA Engine: an AI super-agent control center that reasons about a request and calls the right tool to complete it, built by Varinder Singh.">
-  <meta name="keywords" content="Varinder Singh, project details, web development, AI agent, LLM, tool calling">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ARIA — AI agent platform — Varinder Singh</title>
+  <meta name="description" content="A “super-agent” control centre: one chat interface that works out what you’re asking for and routes it to the right tool.">
+  <meta name="author" content="Varinder Singh">
+  <meta name="theme-color" content="#090c13">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Varinder Singh">
+  <meta property="og:title" content="ARIA — AI agent platform — Varinder Singh">
+  <meta property="og:description" content="A “super-agent” control centre: one chat interface that works out what you’re asking for and routes it to the right tool.">
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-glow" aria-hidden="true"></div>
+  <div class="page-grid" aria-hidden="true"></div>
 
-<body class="portfolio-details-page">
-
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <h1 class="sitename">Varinder Singh</h1>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Varinder Singh — home">
+        <span class="brand-mark" aria-hidden="true">VS</span>
+        <span><span class="brand-name">Varinder Singh</span><span class="brand-role">Full-stack developer</span></span>
       </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="portfolio.html" class="active">Projects</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      <nav id="site-nav" class="nav" aria-label="Main">
+        <a href="portfolio.html" aria-current="page">Work</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <a href="mailto:varindersinghofficial338@gmail.com?subject=Hello%20Varinder" class="btn btn-primary nav-mobile-cta"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg> Email me</a>
       </nav>
-
-      <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <div class="header-actions">
+        <a class="icon-btn" href="https://github.com/VarinderSingh68" target="_blank" rel="noopener" aria-label="GitHub profile"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+        <a class="btn btn-primary btn-sm header-cta" href="contact.html">Let&rsquo;s talk <svg class="icon icon-shift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        <button class="icon-btn nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+          <span class="i-menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg></span><span class="i-close" style="display:none"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
+        </button>
       </div>
-
     </div>
   </header>
 
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
+  <main id="main">
+    <section class="case-hero">
       <div class="container">
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Projects</a></li>
-            <li class="current">AI Agent (ARIA Engine)</li>
-          </ol>
-        </nav>
-        <h1>AI Agent (ARIA Engine)</h1>
+        <nav class="breadcrumb reveal" aria-label="Breadcrumb"><a href="portfolio.html">Work</a><span class="sep">/</span><a href="portfolio.html#learning">Learning projects</a><span class="sep">/</span><span>ARIA</span></nav>
+        <div class="badges reveal"><span class="badge badge-accent"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg> Learning project</span><span class="badge">AI tooling</span><span class="badge badge-off"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.94 5.274A7 7 0 0 1 15.71 10h1.79a4.5 4.5 0 0 1 4.222 6.057"/><path d="M18.796 18.81A4.5 4.5 0 0 1 17.5 19H9A7 7 0 0 1 5.79 5.78"/><path d="m2 2 20 20"/></svg> Demo offline</span></div>
+        <h1 class="reveal reveal-d1">ARIA — AI agent platform</h1>
+        <p class="lead reveal reveal-d2">A “super-agent” control centre: one chat interface that works out what you’re asking for and routes it to the right tool.</p>
+        <dl class="case-meta reveal reveal-d3">
+          <div><dt>Role</dt><dd>Design &amp; full-stack development</dd></div>
+          <div><dt>Type</dt><dd>Learning project</dd></div>
+          <div><dt>Stack</dt><dd>AI tool routing, Document ingestion, Chat UI</dd></div>
+          <div><dt>Links</dt><dd><span class="dim">Demo offline &mdash; see screenshots</span></dd></div>
+        </dl>
       </div>
-    </div><!-- End Page Title -->
+    </section>
 
-    <!-- Portfolio Details Section -->
-    <section id="portfolio-details" class="portfolio-details section">
-      <div class="container" data-aos="fade-up">
+    <section class="case-cover">
+      <div class="container reveal">
+        <button type="button" data-lightbox="assets/img/work/aria-1.webp" data-caption="ARIA chat interface" aria-label="Enlarge: ARIA chat interface" style="display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in"><div class="frame "><div class="frame-bar"><span class="frame-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="frame-url" aria-hidden="true"></span></div><div class="frame-img"><img src="assets/img/work/aria-1.webp" alt="ARIA — ARIA chat interface" width="1600" height="776" loading="eager" decoding="async"></div></div></button>
+      </div>
+    </section>
 
-        <div class="row justify-content-between gy-4 mt-4">
+    <section class="section" style="border-top:0;padding-top:64px">
+      <div class="container case-layout">
+        <div class="prose">
+          <h2 class="reveal">Overview</h2>
+          <div class="reveal"><p>ARIA (Advanced Reasoning & Integration Assistant) replaces a pile of separate apps with a single chat. A request is reasoned about and <strong>routed to the right tool automatically</strong>.</p><p>Built-in shortcuts cover the most common jobs — a data visualisation, a document draft, writing and running a script, or drafting and sending a message — and each can also be triggered in plain language. A “Force a specific tool” control overrides the routing when you know exactly what you want, and a Dev Mode gives IT users lower-level control.</p></div>
 
-          <div class="col-lg-8">
-            <a href="assets/img/portfolio/aria/aria-1.jpg" class="glightbox" data-gallery="aria-gallery" title="ARIA Chat Interface">
-              <img src="assets/img/portfolio/aria/aria-1.jpg" class="img-fluid rounded" alt="ARIA - Advanced Reasoning and Integration Assistant chat interface" loading="lazy">
-            </a>
-            <div class="row gy-3 mt-1">
-              <div class="col-6">
-                <a href="assets/img/portfolio/aria/aria-2.jpg" class="glightbox" data-gallery="aria-gallery" title="Controls Panel">
-                  <img src="assets/img/portfolio/aria/aria-2.jpg" class="img-fluid rounded" alt="ARIA - controls panel with Dev Mode and tool override" loading="lazy">
-                </a>
-              </div>
-              <div class="col-6">
-                <a href="assets/img/portfolio/aria/aria-3.jpg" class="glightbox" data-gallery="aria-gallery" title="Knowledge & Audio Panel">
-                  <img src="assets/img/portfolio/aria/aria-3.jpg" class="img-fluid rounded" alt="ARIA - knowledge base panel with file upload and URL ingestion" loading="lazy">
-                </a>
-              </div>
-            </div>
+          <h2 class="reveal">What I built</h2>
+          <div class="feature-grid reveal"><div class="feature-tile"><span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg></span><h3>Automatic tool routing</h3><p>ARIA decides which tool fits the request.</p></div><div class="feature-tile"><span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg></span><h3>Four built-in tools</h3><p>Data visualisation, document drafting, script writing and execution, and messaging.</p></div><div class="feature-tile"><span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z"/></svg></span><h3>Manual override & Dev Mode</h3><p>Force a specific tool, or switch to lower-level controls.</p></div><div class="feature-tile"><span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/><path d="M14 2v5a1 1 0 0 0 1 1h5"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg></span><h3>Answers from your documents</h3><p>Upload files up to 200 MB (TXT, DOCX, PDF and more) or ingest a URL.</p></div></div>
+
+          <h2 class="reveal">What this project shows</h2>
+          <ul class="check-list reveal"><li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span>Designing an agent that chooses between tools</span></li><li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span>Retrieval from user-supplied files and URLs</span></li><li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span>Balancing automation with manual control</span></li></ul>
+
+          <h2 class="reveal">Screenshots</h2>
+          <div class="gallery">
+            <figure class="reveal">
+              <button type="button" data-lightbox="assets/img/work/aria-2.webp" data-caption="Controls: Dev Mode and manual tool override" aria-label="Enlarge: Controls: Dev Mode and manual tool override"><div class="frame "><div class="frame-bar"><span class="frame-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="frame-url" aria-hidden="true"></span></div><div class="frame-img"><img src="assets/img/work/aria-2.webp" alt="Controls: Dev Mode and manual tool override" width="600" height="410" loading="lazy" decoding="async"></div></div></button>
+              <figcaption>Controls: Dev Mode and manual tool override</figcaption>
+            </figure>
+            <figure class="reveal">
+              <button type="button" data-lightbox="assets/img/work/aria-3.webp" data-caption="Knowledge panel: file upload and URL ingestion" aria-label="Enlarge: Knowledge panel: file upload and URL ingestion"><div class="frame "><div class="frame-bar"><span class="frame-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="frame-url" aria-hidden="true"></span></div><div class="frame-img"><img src="assets/img/work/aria-3.webp" alt="Knowledge panel: file upload and URL ingestion" width="600" height="560" loading="lazy" decoding="async"></div></div></button>
+              <figcaption>Knowledge panel: file upload and URL ingestion</figcaption>
+            </figure>
           </div>
-
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Project Information</h3>
-              <ul>
-                <li><strong>Category</strong>: AI Agent Platform</li>
-                <li><strong>Type</strong>: Personal Project</li>
-                <li><strong>Live Site</strong>: <a href="https://ai-agent-tw1l.onrender.com" target="_blank" rel="noopener">ai-agent-tw1l.onrender.com</a></li>
-              </ul>
-            </div>
-
-            <div class="portfolio-description">
-              <h2>About This Project</h2>
-              <p>
-                ARIA (Advanced Reasoning &amp; Integration Assistant) is a super-agent control center: a single chat interface where a request gets reasoned about and routed to the right tool automatically, instead of needing a different app for every task.
-              </p>
-              <p>
-                Built-in shortcuts cover the most common jobs &mdash; generating a data visualization, drafting a document, writing and running a script, or drafting and sending a message &mdash; and any of them can also be triggered by just describing what you need in plain language. A "Force a specific tool" dropdown lets you override ARIA's own routing when you know exactly what you want, and a Dev Mode caters to IT users who need lower-level control. On the knowledge side, ARIA can ingest files (up to 200MB, TXT/DOCX/PDF and more) or pull in content directly from a URL, so it can answer against your own documents instead of just general knowledge.
-              </p>
-            </div>
-          </div>
-
         </div>
 
+        <aside class="aside">
+            <div class="aside-card">
+              <h3>At a glance</h3>
+              <dl>
+                <div><dt>Series</dt><dd>AI tooling</dd></div>
+                <div><dt>Built with</dt><dd><div class="tags"><span class="tag">AI tool routing</span><span class="tag">Document ingestion</span><span class="tag">Chat UI</span></div></dd></div>
+              </dl>
+            </div>
+            <div class="aside-card">
+              <h3>Live demo</h3>
+              <p class="muted" style="font-size:.93rem">The hosted demo is currently offline. The screenshots on this page show the working build.</p>
+            </div>
+        </aside>
       </div>
-    </section><!-- /Portfolio Details Section -->
+    </section>
+
+    <section class="section-tight" style="padding-top:0">
+      <div class="container">
+        <a class="next-project reveal" href="portfolio-details-premium-cakes.html">
+          <div><span>Next project</span><strong>Premium Cakes — online ordering platform</strong></div>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
 
   </main>
 
-  <footer id="footer" class="footer">
-    <div class="container">
-      <div class="copyright text-center ">
-        <p> <span></span> <strong class="px-1 sitename"></strong> <span><br></span></p>
+  <footer class="site-footer">
+    <section class="footer-cta">
+      <div class="container">
+        <div class="cta reveal">
+          <div class="cta-inner">
+            <div>
+              <span class="eyebrow">Open to work</span>
+              <h2>Hiring an intern, or need a site that runs your business?</h2>
+              <p>I&rsquo;m available for internships, entry-level roles and freelance projects. Tell me what you&rsquo;re building &mdash; I reply within 24&ndash;48 hours.</p>
+            </div>
+            <div class="btn-row">
+              <a class="btn btn-primary btn-lg" href="mailto:varindersinghofficial338@gmail.com?subject=Hello%20Varinder"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg> Email me</a>
+              <a class="btn btn-ghost btn-lg" href="assets/Varinder-Singh-Resume.pdf" download><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg> Resume</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="social-links d-flex justify-content-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </section>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Varinder Singh &middot; Designed and hand-coded in HTML, CSS &amp; JavaScript.</span>
+        <div class="footer-links">
+          <a href="portfolio.html">Work</a>
+          <a href="about.html">About</a>
+          <a href="resume.html">Resume</a>
+          <a href="contact.html">Contact</a>
+          <span class="footer-social">
+            <a class="icon-btn" href="https://github.com/VarinderSingh68" target="_blank" rel="noopener" aria-label="GitHub profile"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+            <a class="icon-btn" href="mailto:varindersinghofficial338@gmail.com?subject=Hello%20Varinder" aria-label="Email Varinder"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></a>
+          </span>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/main.js" defer></script>
 </body>
-
 </html>

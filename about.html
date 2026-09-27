@@ -1,347 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>About - Varinder Singh</title>
-  <meta name="description" content="I am a dedicated developer with a strong foundation in both front-end and back-end technologies, driven by a passion for bringing ideas to life on the web.">
-  <meta name="keywords" content="Varinder Singh, about, web developer, BCA student, front-end, back-end">
-
-  <!-- Open Graph / Social Preview -->
-  <meta property="og:type" content="profile">
-  <meta property="og:title" content="About - Varinder Singh">
-  <meta property="og:description" content="I am a dedicated developer with a strong foundation in both front-end and back-end technologies.">
-  <meta property="og:image" content="assets/img/professional.jpeg">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About — Varinder Singh</title>
+  <meta name="description" content="About Varinder Singh: full-stack developer and B.C.A. student from Mohali, India, who has shipped a client platform and six full-stack apps.">
+  <meta name="author" content="Varinder Singh">
+  <meta name="theme-color" content="#090c13">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Varinder Singh">
+  <meta property="og:title" content="About — Varinder Singh">
+  <meta property="og:description" content="About Varinder Singh: full-stack developer and B.C.A. student from Mohali, India, who has shipped a client platform and six full-stack apps.">
+  <meta property="og:image" content="assets/img/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/devicon@2.15.1/devicon.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
-
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-glow" aria-hidden="true"></div>
+  <div class="page-grid" aria-hidden="true"></div>
 
-<body class="about-page">
-
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <h1 class="sitename">Varinder Singh</h1>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Varinder Singh — home">
+        <span class="brand-mark" aria-hidden="true">VS</span>
+        <span><span class="brand-name">Varinder Singh</span><span class="brand-role">Full-stack developer</span></span>
       </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active">About</a></li>
-          <li><a href="portfolio.html">Projects</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      <nav id="site-nav" class="nav" aria-label="Main">
+        <a href="portfolio.html">Work</a>
+        <a href="about.html" aria-current="page">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <a href="mailto:varindersinghofficial338@gmail.com?subject=Hello%20Varinder" class="btn btn-primary nav-mobile-cta"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg> Email me</a>
       </nav>
-
-      <div class="header-social-links" data-aos="fade-in" data-aos-delay="400">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <div class="header-actions">
+        <a class="icon-btn" href="https://github.com/VarinderSingh68" target="_blank" rel="noopener" aria-label="GitHub profile"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+        <a class="btn btn-primary btn-sm header-cta" href="contact.html">Let&rsquo;s talk <svg class="icon icon-shift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        <button class="icon-btn nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+          <span class="i-menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg></span><span class="i-close" style="display:none"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
+        </button>
       </div>
-
     </div>
   </header>
 
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
-      <div id="tsparticles"></div>
+  <main id="main">
+    <section class="page-header" style="padding-bottom:24px">
       <div class="container">
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li class="current">About</li>
-          </ol>
-        </nav>
-        <h1>About</h1>
+        <span class="eyebrow reveal">About</span>
+        <h1 class="reveal reveal-d1">I&rsquo;d rather ship it than just study it.</h1>
       </div>
-    </div><!-- End Page Title -->
+    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4 justify-content-center">
-          <div class="col-lg-4" data-aos="zoom-in">
-            <img src="assets/img/professional.jpeg" class="img-fluid" alt="Portrait of Varinder Singh">
+    <section class="section" style="border-top:0;padding-top:40px">
+      <div class="container about-grid">
+        <div class="reveal">
+          <div class="portrait">
+            <img src="assets/img/varinder.webp" alt="Portrait of Varinder Singh" width="525" height="689">
+            <div class="portrait-caption"><div><strong>Varinder Singh</strong><span>Mohali, Punjab, India</span></div><span class="badge badge-live"><span class="dot dot-pulse"></span> Open</span></div>
           </div>
-          <div class="col-lg-8 content">
-            <h2 data-aos="fade-up">Passionate Developer &amp; Creative Problem-Solver</h2>
-            <p class="fst-italic py-3" data-aos="fade-up">
-              I am a dedicated developer with a strong foundation in both front-end and back-end technologies, driven by a passion for bringing ideas to life on the web.
-            </p>
-            <div class="row">
-              <div class="col-lg-6">
-                <ul data-aos="fade-up" data-aos-delay="100">
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>B.C.A</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Punjab, India</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-                </ul>
-              </div>
-              <div class="col-lg-6">
-                <ul data-aos="fade-up" data-aos-delay="200">
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>varindersinghofficial338@gmail.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Status:</strong> <span>Open to opportunities</span></li>
-                </ul>
-              </div>
-            </div>
-            <p class="py-3" data-aos="fade-up" data-aos-delay="300">
-              I build things for the web. As a developer, I'm driven by a passion for turning complex problems into elegant, user-friendly digital experiences. My journey into technology started with a curiosity for how things work, and it has evolved into a career where I get to build efficient, scalable, and visually appealing applications. I'm always exploring new technologies to continuously improve my craft.
-            </p>
-          </div>
+          <dl class="about-facts">
+            <div class="fact"><dt>Studying</dt><dd>B.C.A., 2024&ndash;2027</dd></div>
+            <div class="fact"><dt>Based in</dt><dd>Mohali, India</dd></div>
+            <div class="fact"><dt>Open to</dt><dd>Internships &amp; entry-level</dd></div>
+            <div class="fact"><dt>Also</dt><dd>Freelance projects</dd></div>
+          </dl>
         </div>
-
-      </div>
-
-    </section><!-- /About Section -->
-
-    <!-- My Journey Section -->
-    <section id="journey" class="journey resume section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>My Journey</h2>
-      </div>
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="resume-item">
-              <h4>Class 10th &amp; 12th</h4>
-              <h5>2021-22 &amp; 2023-24</h5>
-              <p><em>Shishu Niketan Public School, Punjab</em></p>
-            </div><!-- End Resume Item -->
-
-            <div class="resume-item">
-              <h4>Bachelor of Computer Applications</h4>
-              <h5>2024 - 2027</h5>
-              <p><em>Gian Jyoti Institute of Management and Technology (GJIMT), Punjab</em></p>
-            </div><!-- End Resume Item -->
-
-            <div class="resume-item">
-              <h4>Web Development Training</h4>
-              <h5>2024 - Present</h5>
-              <p><em>Speed Techno Training Institute, Sector 34, Chandigarh</em></p>
-              <p>Hands-on training in HTML, CSS, JavaScript, React, Python and Java &mdash; building real, working projects alongside the coursework.</p>
-            </div><!-- End Resume Item -->
+        <div class="prose">
+          <div class="reveal">
+            <p class="lead" style="color:var(--text)">I&rsquo;m Varinder Singh, a full-stack developer and B.C.A. student at Gian Jyoti Institute of Management and Technology in Punjab.</p>
+            <p>I started web development training in 2024. Instead of stopping at exercises, I kept building complete products &mdash; a bakery store, a dental clinic booking system, a salon platform, a gym membership site, a pet store and an AI assistant. Each one has a real backend and an admin panel, and each one was deployed live. I deliberately used different stacks &mdash; React, Vite, Python with FastAPI, PHP with Tailwind and Alpine.js &mdash; so I&rsquo;d understand each properly.</p>
+            <p>In 2026 that practice turned into my first client. A local bakery was taking every order by phone and WhatsApp, so I built them <a class="link-arrow" style="display:inline" href="portfolio-details-premium-cakes.html">Premium Cakes</a>: a full ordering platform with a no-code admin panel, launched on their own domain. I still support it today.</p>
+            <p>Now I&rsquo;m looking for an <strong>internship or entry-level role</strong> on a team where I can keep shipping real things &mdash; and I take on <strong>freelance projects</strong> for local businesses.</p>
+          </div>
+          <div class="btn-row reveal" style="margin-top:32px">
+            <a class="btn btn-primary" href="portfolio.html">See my work <svg class="icon icon-shift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+            <a class="btn btn-ghost" href="assets/Varinder-Singh-Resume.pdf" download><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg> Download resume</a>
           </div>
         </div>
       </div>
-    </section><!-- /My Journey Section -->
+    </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Skills</h2>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row skills-content">
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-
-            <div class="progress">
-              <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>CSS</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>JavaScript</span> <i class="val">100%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-
-            <div class="progress">
-              <span class="skill"><span>PHP</span> <i class="val">60%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>React</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-            <div class="progress">
-              <span class="skill"><span>Python</span> <i class="val">90%</i></span>
-              <div class="progress-bar-wrap">
-                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div><!-- End Skills Item -->
-
-          </div>
-
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">What I care about</span>
+          <h2>Three rules I build by</h2>
         </div>
-
+        <div class="values">
+          <div class="cap-card reveal"><span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"/><circle cx="16.5" cy="7.5" r=".5" fill="currentColor"/></svg></span><h3>Owners should run it without me</h3><p>Every project ships with an admin panel, so day-to-day changes never wait on a developer.</p></div>
+          <div class="cap-card reveal reveal-d1"><span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></span><h3>Fast on real phones</h3><p>Most customers order from a phone on mobile data, so I build mobile-first and keep pages light.</p></div>
+          <div class="cap-card reveal reveal-d2"><span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"/><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"/></svg></span><h3>Ship it, then keep improving</h3><p>A live product teaches more than a perfect plan. I launch, listen and iterate.</p></div>
+        </div>
       </div>
+    </section>
 
-    </section><!-- /Skills Section -->
-
-    <!-- Tech Stack Section -->
-    <section id="tech-stack" class="tech-stack section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Tools &amp; Technologies</h2>
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Journey</span>
+          <h2>Milestones so far</h2>
+        </div>
+        <div class="timeline">
+          <div class="tl-item reveal"><div class="tl-date">2024</div><div><h3>Started B.C.A. and web development training</h3><p>Gian Jyoti Institute of Management and Technology, and Speed Techno Training Institute in Chandigarh &mdash; HTML, CSS, JavaScript, React, Python and Java.</p></div></div>
+          <div class="tl-item reveal"><div class="tl-date">2024 &ndash; 2026</div><div><h3>Built and deployed six full-stack apps</h3><p>The Business Growth Agent series and the ARIA AI agent &mdash; each with a backend, an admin panel and a live deployment.</p></div></div>
+          <div class="tl-item is-gold reveal"><div class="tl-date">2026</div><div><h3>First client: Premium Cakes goes live</h3><p>Designed, built, launched and sold an online ordering platform to Well Baked Bakery &mdash; now in daily use, with ongoing support.</p></div></div>
+          <div class="tl-item is-future reveal"><div class="tl-date">2027</div><div><h3>Graduating B.C.A.</h3><p>Looking for a team to join as an intern or entry-level developer before and after graduation.</p></div></div>
+        </div>
       </div>
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-        <div class="row gy-4 text-center">
-          <div class="col-4 col-md-2" data-aos="zoom-in" data-aos-delay="50">
-            <div class="tech-item"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Stack</span>
+          <h2>Tools I&rsquo;ve shipped with</h2>
+        </div>
+        <div class="stack-grid">
+          <div class="stack-card tier-prod reveal">
+            <header><span class="badge badge-sold"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09"/><path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05"/></svg> In production</span></header>
+            <p class="stack-note">Running today on the Premium Cakes platform.</p>
+            <div class="tags"><span class="tag">JavaScript</span><span class="tag">HTML &amp; CSS</span><span class="tag">Node.js</span><span class="tag">Express</span><span class="tag">PostgreSQL</span><span class="tag">Nginx</span><span class="tag">PM2</span><span class="tag">Linux VPS</span><span class="tag">SSL / HTTPS</span></div>
           </div>
-          <div class="col-4 col-md-2" data-aos="zoom-in" data-aos-delay="100">
-            <div class="tech-item"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+          <div class="stack-card reveal reveal-d1">
+            <header><span class="badge badge-accent"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg> In my projects</span></header>
+            <p class="stack-note">Used to build and deploy my live demo apps.</p>
+            <div class="tags"><span class="tag">React</span><span class="tag">Vite</span><span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">PHP 8</span><span class="tag">Tailwind CSS</span><span class="tag">Alpine.js</span><span class="tag">REST APIs</span><span class="tag">PostHog</span><span class="tag">Render</span><span class="tag">Git &amp; GitHub</span></div>
           </div>
-          <div class="col-4 col-md-2" data-aos="zoom-in" data-aos-delay="150">
-            <div class="tech-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
-          </div>
-          <div class="col-4 col-md-2" data-aos="zoom-in" data-aos-delay="200">
-            <div class="tech-item"><i class="devicon-react-original colored"></i><span>React</span></div>
-          </div>
-          <div class="col-4 col-md-2" data-aos="zoom-in" data-aos-delay="250">
-            <div class="tech-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
-          </div>
-          <div class="col-4 col-md-2" data-aos="zoom-in" data-aos-delay="300">
-            <div class="tech-item"><i class="devicon-java-plain colored"></i><span>Java</span></div>
-          </div>
-          <div class="col-4 col-md-2" data-aos="zoom-in" data-aos-delay="350">
-            <div class="tech-item"><i class="devicon-django-plain colored"></i><span>Django</span></div>
-          </div>
-          <div class="col-4 col-md-2" data-aos="zoom-in" data-aos-delay="400">
-            <div class="tech-item"><i class="devicon-flask-original colored"></i><span>Flask</span></div>
-          </div>
-          <div class="col-4 col-md-2" data-aos="zoom-in" data-aos-delay="450">
-            <div class="tech-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
-          </div>
-          <div class="col-4 col-md-2" data-aos="zoom-in" data-aos-delay="500">
-            <div class="tech-item"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
-          </div>
-          <div class="col-4 col-md-2" data-aos="zoom-in" data-aos-delay="550">
-            <div class="tech-item"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div>
-          </div>
-          <div class="col-4 col-md-2" data-aos="zoom-in" data-aos-delay="600">
-            <div class="tech-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+          <div class="stack-card tier-learn reveal reveal-d2">
+            <header><span class="badge"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg> Studied</span></header>
+            <p class="stack-note">Covered in my training and B.C.A. coursework.</p>
+            <div class="tags"><span class="tag">Java</span><span class="tag">MySQL</span><span class="tag">Bootstrap</span><span class="tag">C / C++</span></div>
           </div>
         </div>
       </div>
-    </section><!-- /Tech Stack Section -->
+    </section>
 
-    <!-- Stats Section -->
-    <section id="stats" class="stats section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Years of Hands-On Training</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Core Technologies</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="stats-item text-center w-100 h-100">
-              <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
-              <p>Year of B.C.A.</p>
-            </div>
-          </div><!-- End Stats Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Stats Section -->
   </main>
 
-  <footer id="footer" class="footer">
-    <div class="container">
-      <div class="copyright text-center ">
-        <p> <span></span> <strong class="px-1 sitename"></strong> <span><br></span></p>
+  <footer class="site-footer">
+    <section class="footer-cta">
+      <div class="container">
+        <div class="cta reveal">
+          <div class="cta-inner">
+            <div>
+              <span class="eyebrow">Open to work</span>
+              <h2>Hiring an intern, or need a site that runs your business?</h2>
+              <p>I&rsquo;m available for internships, entry-level roles and freelance projects. Tell me what you&rsquo;re building &mdash; I reply within 24&ndash;48 hours.</p>
+            </div>
+            <div class="btn-row">
+              <a class="btn btn-primary btn-lg" href="mailto:varindersinghofficial338@gmail.com?subject=Hello%20Varinder"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg> Email me</a>
+              <a class="btn btn-ghost btn-lg" href="assets/Varinder-Singh-Resume.pdf" download><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg> Resume</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="social-links d-flex justify-content-center" data-aos="fade-up" data-aos-delay="200">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </section>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Varinder Singh &middot; Designed and hand-coded in HTML, CSS &amp; JavaScript.</span>
+        <div class="footer-links">
+          <a href="portfolio.html">Work</a>
+          <a href="about.html">About</a>
+          <a href="resume.html">Resume</a>
+          <a href="contact.html">Contact</a>
+          <span class="footer-social">
+            <a class="icon-btn" href="https://github.com/VarinderSingh68" target="_blank" rel="noopener" aria-label="GitHub profile"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+            <a class="icon-btn" href="mailto:varindersinghofficial338@gmail.com?subject=Hello%20Varinder" aria-label="Email Varinder"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></a>
+          </span>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles-slim@2.12.0/tsparticles.slim.bundle.min.js"></script>
-
-  <!-- GSAP Core and ScrollTrigger Plugin -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/main.js" defer></script>
 </body>
-
 </html>

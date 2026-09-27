@@ -1,171 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Doctor Business Growth Agent - Varinder Singh</title>
-  <meta name="description" content="Doctor Business Growth Agent: a full-stack clinic management platform with a patient-facing booking site and an admin dashboard, built by Varinder Singh.">
-  <meta name="keywords" content="Varinder Singh, project details, web development, full-stack, healthcare, appointment booking">
-
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Doctor Business Growth Agent — Varinder Singh</title>
+  <meta name="description" content="A clinic platform that pairs a patient-facing booking site with an admin dashboard for running the practice.">
+  <meta name="author" content="Varinder Singh">
+  <meta name="theme-color" content="#090c13">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Varinder Singh">
+  <meta property="og:title" content="Doctor Business Growth Agent — Varinder Singh">
+  <meta property="og:description" content="A clinic platform that pairs a patient-facing booking site with an admin dashboard for running the practice.">
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-glow" aria-hidden="true"></div>
+  <div class="page-grid" aria-hidden="true"></div>
 
-<body class="portfolio-details-page">
-
-  <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
-        <h1 class="sitename">Varinder Singh</h1>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Varinder Singh — home">
+        <span class="brand-mark" aria-hidden="true">VS</span>
+        <span><span class="brand-name">Varinder Singh</span><span class="brand-role">Full-stack developer</span></span>
       </a>
-
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="portfolio.html" class="active">Projects</a></li>
-          <li><a href="resume.html">Resume</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      <nav id="site-nav" class="nav" aria-label="Main">
+        <a href="portfolio.html" aria-current="page">Work</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <a href="mailto:varindersinghofficial338@gmail.com?subject=Hello%20Varinder" class="btn btn-primary nav-mobile-cta"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg> Email me</a>
       </nav>
-
-      <div class="header-social-links">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+      <div class="header-actions">
+        <a class="icon-btn" href="https://github.com/VarinderSingh68" target="_blank" rel="noopener" aria-label="GitHub profile"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+        <a class="btn btn-primary btn-sm header-cta" href="contact.html">Let&rsquo;s talk <svg class="icon icon-shift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        <button class="icon-btn nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+          <span class="i-menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg></span><span class="i-close" style="display:none"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
+        </button>
       </div>
-
     </div>
   </header>
 
-  <main class="main">
-
-    <!-- Page Title -->
-    <div class="page-title" data-aos="fade">
+  <main id="main">
+    <section class="case-hero">
       <div class="container">
-        <nav class="breadcrumbs">
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Projects</a></li>
-            <li class="current">Doctor Business Growth Agent</li>
-          </ol>
-        </nav>
-        <h1>Doctor Business Growth Agent</h1>
+        <nav class="breadcrumb reveal" aria-label="Breadcrumb"><a href="portfolio.html">Work</a><span class="sep">/</span><a href="portfolio.html#learning">Learning projects</a><span class="sep">/</span><span>Dr. Rana Dental Clinic</span></nav>
+        <div class="badges reveal"><span class="badge badge-accent"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg> Learning project</span><span class="badge">Growth Agent · Clinic</span><span class="badge badge-live"><span class="dot"></span> Live demo</span></div>
+        <h1 class="reveal reveal-d1">Doctor Business Growth Agent</h1>
+        <p class="lead reveal reveal-d2">A clinic platform that pairs a patient-facing booking site with an admin dashboard for running the practice.</p>
+        <dl class="case-meta reveal reveal-d3">
+          <div><dt>Role</dt><dd>Design &amp; full-stack development</dd></div>
+          <div><dt>Type</dt><dd>Learning project &middot; demoed as &ldquo;Dr. Rana Dental Clinic&rdquo;</dd></div>
+          <div><dt>Stack</dt><dd>React, Vite, REST API</dd></div>
+          <div><dt>Links</dt><dd><a href="https://stellar-care-ui.onrender.com" target="_blank" rel="noopener">Live demo <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a><br><a href="https://stellar-care-api.onrender.com" target="_blank" rel="noopener">API <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></dd></div>
+        </dl>
       </div>
-    </div><!-- End Page Title -->
+    </section>
 
-    <!-- Portfolio Details Section -->
-    <section id="portfolio-details" class="portfolio-details section">
-      <div class="container" data-aos="fade-up">
+    <section class="case-cover">
+      <div class="container reveal">
+        <button type="button" data-lightbox="assets/img/work/dental-1.webp" data-caption="Clinic homepage" aria-label="Enlarge: Clinic homepage" style="display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in"><div class="frame "><div class="frame-bar"><span class="frame-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="frame-url">stellar-care-ui.onrender.com</span></div><div class="frame-img"><img src="assets/img/work/dental-1.webp" alt="Dr. Rana Dental Clinic — Clinic homepage" width="1582" height="904" loading="eager" decoding="async"></div></div></button>
+      </div>
+    </section>
 
-        <div class="row justify-content-between gy-4 mt-4">
+    <section class="section" style="border-top:0;padding-top:64px">
+      <div class="container case-layout">
+        <div class="prose">
+          <h2 class="reveal">Overview</h2>
+          <div class="reveal"><p>Doctor Business Growth Agent is a clinic management platform, demoed as “Dr. Rana Dental Clinic.” It combines a marketing and booking site for patients with an admin dashboard for the practice.</p><p>The front end is a React single-page app built with Vite. It talks to a <strong>separate REST API</strong> deployed on its own, and shows a live backend status indicator so visitors know the booking system is reachable.</p></div>
 
-          <div class="col-lg-8">
-            <a href="assets/img/portfolio/dental/dental-1.jpg" class="glightbox" data-gallery="dental-gallery" title="Homepage">
-              <img src="assets/img/portfolio/dental/dental-1.jpg" class="img-fluid rounded" alt="Doctor Business Growth Agent - Dr. Rana Dental Clinic homepage" loading="lazy">
-            </a>
-            <div class="row gy-3 mt-1">
-              <div class="col-6">
-                <a href="assets/img/portfolio/dental/dental-2.jpg" class="glightbox" data-gallery="dental-gallery" title="Services">
-                  <img src="assets/img/portfolio/dental/dental-2.jpg" class="img-fluid rounded" alt="Doctor Business Growth Agent - services and pricing page" loading="lazy">
-                </a>
-              </div>
-              <div class="col-6">
-                <a href="assets/img/portfolio/dental/dental-3.jpg" class="glightbox" data-gallery="dental-gallery" title="Book Appointment">
-                  <img src="assets/img/portfolio/dental/dental-3.jpg" class="img-fluid rounded" alt="Doctor Business Growth Agent - appointment booking page with calendar" loading="lazy">
-                </a>
-              </div>
-            </div>
+          <h2 class="reveal">What I built</h2>
+          <div class="feature-grid reveal"><div class="feature-tile"><span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 17V7"/><path d="M16 8h-6a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8"/><path d="M4 3a1 1 0 0 1 1-1 1.3 1.3 0 0 1 .7.2l.933.6a1.3 1.3 0 0 0 1.4 0l.934-.6a1.3 1.3 0 0 1 1.4 0l.933.6a1.3 1.3 0 0 0 1.4 0l.933-.6a1.3 1.3 0 0 1 1.4 0l.934.6a1.3 1.3 0 0 0 1.4 0l.933-.6A1.3 1.3 0 0 1 19 2a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1 1.3 1.3 0 0 1-.7-.2l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.934.6a1.3 1.3 0 0 1-1.4 0l-.933-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-1.4 0l-.934-.6a1.3 1.3 0 0 0-1.4 0l-.933.6a1.3 1.3 0 0 1-.7.2 1 1 0 0 1-1-1z"/></svg></span><h3>Transparent pricing</h3><p>Cleanings, fillings, extractions, root canals, cosmetic work and implants, each with a clear price.</p></div><div class="feature-tile"><span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="m9 15 2 2 4-4"/></svg></span><h3>Calendar booking</h3><p>Pick a date and time slot; the clinic confirms within 24 hours.</p></div><div class="feature-tile"><span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg></span><h3>Live backend status</h3><p>An indicator that shows whether the API is up — useful on free hosting that sleeps.</p></div><div class="feature-tile"><span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg></span><h3>Patient portal & chat</h3><p>A patient portal entry point and a chat widget for quick questions.</p></div><div class="feature-tile"><span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg></span><h3>Admin dashboard</h3><p>Manage appointments, services and clinic content.</p></div><div class="feature-tile"><span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></span><h3>Email & WhatsApp ready</h3><p>The API is wired to email and WhatsApp (WATI) messaging services, with its status on a public API page.</p></div></div>
+
+          <h2 class="reveal">What this project shows</h2>
+          <ul class="check-list reveal"><li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span>React + Vite single-page app consuming a separate REST API</span></li><li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span>Date and time-slot booking flows</span></li><li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span>Designing for real deployment conditions, like a sleeping backend</span></li></ul>
+
+          <h2 class="reveal">Screenshots</h2>
+          <div class="gallery">
+            <figure class="reveal">
+              <button type="button" data-lightbox="assets/img/work/dental-2.webp" data-caption="Services with per-treatment pricing" aria-label="Enlarge: Services with per-treatment pricing"><div class="frame "><div class="frame-bar"><span class="frame-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="frame-url" aria-hidden="true"></span></div><div class="frame-img"><img src="assets/img/work/dental-2.webp" alt="Services with per-treatment pricing" width="1582" height="904" loading="lazy" decoding="async"></div></div></button>
+              <figcaption>Services with per-treatment pricing</figcaption>
+            </figure>
+            <figure class="reveal">
+              <button type="button" data-lightbox="assets/img/work/dental-3.webp" data-caption="Appointment booking with a calendar and time-slot picker" aria-label="Enlarge: Appointment booking with a calendar and time-slot picker"><div class="frame "><div class="frame-bar"><span class="frame-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="frame-url" aria-hidden="true"></span></div><div class="frame-img"><img src="assets/img/work/dental-3.webp" alt="Appointment booking with a calendar and time-slot picker" width="1582" height="904" loading="lazy" decoding="async"></div></div></button>
+              <figcaption>Appointment booking with a calendar and time-slot picker</figcaption>
+            </figure>
           </div>
-
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Project Information</h3>
-              <ul>
-                <li><strong>Category</strong>: Full-Stack Web App</li>
-                <li><strong>Type</strong>: Personal Project</li>
-                <li><strong>Live Frontend</strong>: <a href="https://stellar-care-ui.onrender.com" target="_blank" rel="noopener">stellar-care-ui.onrender.com</a></li>
-                <li><strong>Live Backend</strong>: <a href="https://stellar-care-api.onrender.com" target="_blank" rel="noopener">stellar-care-api.onrender.com</a></li>
-              </ul>
-            </div>
-
-            <div class="credential-box">
-              <div class="credential-label"><i class="bi bi-shield-lock"></i> Demo Admin Access</div>
-              <p>Username: <code>admin</code> &nbsp; Password: <code>password123</code></p>
-              <p class="credential-warning">Demo environment with sample data &mdash; feel free to explore the admin panel.</p>
-            </div>
-
-            <div class="portfolio-description">
-              <h2>About This Project</h2>
-              <p>
-                Doctor Business Growth Agent is a full-stack clinic management platform, demoed here as "Dr. Rana Dental Clinic." It pairs a patient-facing marketing and booking site with an admin dashboard for running the practice.
-              </p>
-              <p>
-                Patients can browse services with transparent pricing (cleanings, fillings, extractions, root canals, cosmetic procedures, implants, and more), then book an appointment through a calendar and time-slot picker that confirms within 24 hours. The site also includes a live backend status indicator, a patient portal entry point, and a chat widget for quick questions. On the admin side, the dashboard manages appointments, services, and clinic content.
-              </p>
-            </div>
-          </div>
-
         </div>
 
+        <aside class="aside">
+            <div class="aside-card">
+              <h3>At a glance</h3>
+              <dl>
+                <div><dt>Series</dt><dd>Growth Agent · Clinic</dd></div>
+                <div><dt>Built with</dt><dd><div class="tags"><span class="tag">React</span><span class="tag">Vite</span><span class="tag">REST API</span></div></dd></div>
+              </dl>
+            </div>
+            <div class="aside-card is-demo">
+              <h3>Try the demo</h3>
+              <div class="cred"><div>Username <code>admin</code></div><div>Password <code>password123</code></div></div>
+              <a class="btn btn-primary" href="https://stellar-care-ui.onrender.com" target="_blank" rel="noopener" style="margin-top:16px">Open live demo <svg class="icon icon-diag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+              <p class="fine">Demo environment with sample data. Free hosting &mdash; the first load can take up to a minute.</p>
+            </div>
+        </aside>
       </div>
-    </section><!-- /Portfolio Details Section -->
+    </section>
+
+    <section class="section-tight" style="padding-top:0">
+      <div class="container">
+        <a class="next-project reveal" href="portfolio-details-bakery.html">
+          <div><span>Next project</span><strong>Bakery Business Growth Agent</strong></div>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
 
   </main>
 
-  <footer id="footer" class="footer">
-    <div class="container">
-      <div class="copyright text-center ">
-        <p> <span></span> <strong class="px-1 sitename"></strong> <span><br></span></p>
+  <footer class="site-footer">
+    <section class="footer-cta">
+      <div class="container">
+        <div class="cta reveal">
+          <div class="cta-inner">
+            <div>
+              <span class="eyebrow">Open to work</span>
+              <h2>Hiring an intern, or need a site that runs your business?</h2>
+              <p>I&rsquo;m available for internships, entry-level roles and freelance projects. Tell me what you&rsquo;re building &mdash; I reply within 24&ndash;48 hours.</p>
+            </div>
+            <div class="btn-row">
+              <a class="btn btn-primary btn-lg" href="mailto:varindersinghofficial338@gmail.com?subject=Hello%20Varinder"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg> Email me</a>
+              <a class="btn btn-ghost btn-lg" href="assets/Varinder-Singh-Resume.pdf" download><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg> Resume</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="social-links d-flex justify-content-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+    </section>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Varinder Singh &middot; Designed and hand-coded in HTML, CSS &amp; JavaScript.</span>
+        <div class="footer-links">
+          <a href="portfolio.html">Work</a>
+          <a href="about.html">About</a>
+          <a href="resume.html">Resume</a>
+          <a href="contact.html">Contact</a>
+          <span class="footer-social">
+            <a class="icon-btn" href="https://github.com/VarinderSingh68" target="_blank" rel="noopener" aria-label="GitHub profile"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+            <a class="icon-btn" href="mailto:varindersinghofficial338@gmail.com?subject=Hello%20Varinder" aria-label="Email Varinder"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></a>
+          </span>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+  <script src="assets/js/main.js" defer></script>
 </body>
-
 </html>
