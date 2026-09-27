@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Projects - Varinder Singh</title>
-  <meta name="description" content="Explore projects by Varinder Singh, including web applications, branding, and product design.">
+  <meta name="description" content="Client projects sold and live in production, plus learning projects by Varinder Singh.">
   <meta name="keywords" content="Varinder Singh, projects, portfolio, web development, React, Python">
 
   <!-- Open Graph / Social Preview -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Projects - Varinder Singh">
-  <meta property="og:description" content="Explore projects by Varinder Singh, including web applications, branding, and product design.">
+  <meta property="og:description" content="Client projects sold and live in production, plus learning projects by Varinder Singh.">
   <meta property="og:image" content="assets/img/professional.jpeg">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -83,6 +83,59 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <nav class="project-group-nav" aria-label="Project categories">
+          <a href="#client-projects" class="nav-client"><i class="bi bi-patch-check-fill"></i> Client Projects <span class="count">1</span></a>
+          <a href="#learning-projects"><i class="bi bi-lightbulb"></i> Learning Projects <span class="count">6</span></a>
+        </nav>
+
+        <!-- Client Projects (Sold) -->
+        <div id="client-projects" class="project-group project-group-client">
+          <div class="project-group-header">
+            <span class="group-eyebrow"><i class="bi bi-patch-check-fill"></i> Client Work &middot; Sold</span>
+            <h2>Client Projects</h2>
+            <p>Real products built for paying clients &mdash; sold, deployed to production and in daily use by real customers.</p>
+          </div>
+
+        <div class="row g-0 project-spotlight is-client align-items-stretch">
+          <div class="col-lg-6">
+            <img src="assets/img/portfolio/premium-cakes/premium-cakes-1.jpg" class="spotlight-img spotlight-img-left" alt="Premium Cakes storefront homepage on chandigarhcakeclub.club" loading="lazy">
+          </div>
+          <div class="col-lg-6">
+            <div class="spotlight-content">
+              <div class="spotlight-badges">
+                <span class="sold-badge"><i class="bi bi-bag-check-fill"></i> Sold</span>
+                <span class="live-badge"><span class="live-dot"></span> Live in production</span>
+              </div>
+              <span class="spotlight-tag">Full-Stack E-commerce Platform</span>
+              <h3>Premium Cakes</h3>
+              <p class="spotlight-client">Built for Well Baked Bakery</p>
+              <p>A production online ordering platform that replaced manual phone/WhatsApp orders with a self-service storefront and a no-code admin dashboard the owner runs day to day.</p>
+              <ul>
+                <li>Live menu of 200+ products across 25+ categories with size/weight pricing, cart and checkout</li>
+                <li>Automatic PDF invoices plus WhatsApp and email order alerts to the owner</li>
+                <li>Password-protected admin for products, banners, coupons, orders and store settings</li>
+              </ul>
+              <div class="tech-chips">
+                <span>Vanilla JS</span><span>Node.js / Express</span><span>PostgreSQL</span><span>Nginx + PM2</span><span>Linux VPS</span>
+              </div>
+              <div class="spotlight-links">
+                <a href="https://chandigarhcakeclub.club/" target="_blank" rel="noopener" class="btn-get-started btn-solid">Live Site</a>
+                <a href="portfolio-details-premium-cakes.html" class="btn-get-started">Case Study</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div><!-- /Client Projects -->
+
+        <!-- Learning Projects -->
+        <div id="learning-projects" class="project-group">
+          <div class="project-group-header">
+            <span class="group-eyebrow"><i class="bi bi-lightbulb"></i> Learning &amp; Practice</span>
+            <h2>Learning Projects</h2>
+            <p>Projects I built to learn and experiment with full-stack patterns, admin dashboards and AI tooling &mdash; each one running as a live demo.</p>
+          </div>
+
         <div class="row g-0 project-spotlight align-items-stretch">
           <div class="col-lg-6">
             <img src="assets/img/portfolio/bakery/bakery-1.jpg" class="spotlight-img" alt="Bakery Business Growth Agent storefront homepage" loading="lazy">
@@ -214,6 +267,8 @@
             </div>
           </div>
         </div>
+
+        </div><!-- /Learning Projects -->
 
         <p class="projects-note" data-aos="fade-up" data-aos-delay="200">More projects in progress &mdash; check back soon.</p>
       </div>

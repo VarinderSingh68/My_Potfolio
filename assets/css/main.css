@@ -2141,3 +2141,300 @@ section,
 .glow-accent:hover {
   box-shadow: 0 0 30px rgba(176, 242, 252, 0.25);
 }
+/*--------------------------------------------------------------
+# Project Groups (Client Work vs Learning Projects)
+--------------------------------------------------------------*/
+:root {
+  --sold-color: #f5c451;
+  --sold-color-rgb: 245, 196, 81;
+  --live-color: #3ddc97;
+  --live-color-rgb: 61, 220, 151;
+}
+
+.project-group-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 50px;
+}
+
+.project-group-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: 1px solid var(--lightest-navy);
+  border-radius: 50px;
+  background: var(--surface-color);
+  color: var(--default-color);
+  font-family: var(--heading-font);
+  font-size: 14px;
+  transition: var(--transition);
+}
+
+.project-group-nav a:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.project-group-nav a.nav-client i {
+  color: var(--sold-color);
+}
+
+.project-group-nav .count {
+  background: color-mix(in srgb, var(--accent-color), transparent 85%);
+  color: var(--accent-color);
+  border-radius: 50px;
+  padding: 1px 9px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.project-group {
+  scroll-margin-top: 100px;
+}
+
+.project-group + .project-group {
+  margin-top: 80px;
+}
+
+.project-group-header {
+  margin-bottom: 28px;
+}
+
+.project-group-header .group-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  color: var(--accent-color);
+  font-family: var(--heading-font);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.project-group-client .project-group-header .group-eyebrow {
+  color: var(--sold-color);
+}
+
+.project-group-header h2 {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.project-group-header p {
+  max-width: 720px;
+  margin: 0;
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
+}
+
+/* Client (sold) project card accents */
+.project-spotlight.is-client {
+  border-color: rgba(var(--sold-color-rgb), 0.4);
+}
+
+.project-spotlight.is-client:hover {
+  border-color: var(--sold-color);
+  box-shadow: 0 15px 40px -15px rgba(var(--sold-color-rgb), 0.3);
+}
+
+.project-spotlight .spotlight-img.spotlight-img-left {
+  object-position: left top;
+}
+
+.spotlight-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.sold-badge,
+.live-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-family: var(--heading-font);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  line-height: 1.4;
+}
+
+.sold-badge {
+  background: var(--sold-color);
+  color: #1d1604;
+}
+
+.live-badge {
+  background: rgba(var(--live-color-rgb), 0.1);
+  border: 1px solid rgba(var(--live-color-rgb), 0.4);
+  color: var(--live-color);
+}
+
+.live-badge .live-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--live-color);
+  box-shadow: 0 0 0 0 rgba(var(--live-color-rgb), 0.6);
+  animation: livePulse 2s infinite;
+}
+
+@keyframes livePulse {
+  0% { box-shadow: 0 0 0 0 rgba(var(--live-color-rgb), 0.6); }
+  70% { box-shadow: 0 0 0 8px rgba(var(--live-color-rgb), 0); }
+  100% { box-shadow: 0 0 0 0 rgba(var(--live-color-rgb), 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-badge .live-dot { animation: none; }
+}
+
+.project-spotlight .spotlight-client {
+  margin-top: -8px;
+  margin-bottom: 14px;
+  color: var(--sold-color);
+  font-family: var(--heading-font);
+  font-size: 14px;
+}
+
+.tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.tech-chips span {
+  padding: 4px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--accent-color), transparent 92%);
+  color: var(--accent-color);
+  font-family: var(--heading-font);
+  font-size: 12px;
+}
+
+/* Client case study page */
+.portfolio-details .client-stats {
+  margin-top: 40px;
+}
+
+.portfolio-details .client-stat {
+  height: 100%;
+  padding: 24px 20px;
+  text-align: center;
+  background: var(--surface-color);
+  border: 1px solid var(--lightest-navy);
+  border-radius: 8px;
+}
+
+.portfolio-details .client-stat strong {
+  display: block;
+  color: var(--sold-color);
+  font-family: var(--heading-font);
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.portfolio-details .client-stat span {
+  display: block;
+  margin-top: 6px;
+  color: var(--default-color);
+  font-size: 14px;
+}
+
+.portfolio-details .case-section {
+  margin-top: 50px;
+}
+
+.portfolio-details .case-section h2 {
+  margin-bottom: 18px;
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.portfolio-details .case-section p {
+  color: var(--default-color);
+  line-height: 1.8;
+}
+
+.portfolio-details .case-list {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.portfolio-details .case-list li {
+  padding-bottom: 10px;
+  color: var(--default-color);
+  line-height: 1.6;
+}
+
+.portfolio-details .case-list li::marker {
+  color: var(--accent-color);
+}
+
+.portfolio-details .case-card {
+  height: 100%;
+  padding: 30px;
+  background: var(--surface-color);
+  border: 1px solid var(--lightest-navy);
+  border-radius: 8px;
+}
+
+.portfolio-details .case-card h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+}
+
+.portfolio-details .case-card h2 i {
+  color: var(--accent-color);
+}
+
+.portfolio-details .case-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.portfolio-details .case-links .btn-get-started {
+  margin-top: 0;
+  padding: 12px 28px;
+}
+
+.portfolio-details .portfolio-info .sold-badge {
+  margin-bottom: 18px;
+}
+
+.portfolio-details .portfolio-info .tech-chips {
+  margin: 20px 0 0;
+}
+
+.portfolio-details .portfolio-info .btn-get-started {
+  display: block;
+  margin-top: 22px;
+  text-align: center;
+}
+
+@media (max-width: 575px) {
+  .project-group-header h2 {
+    font-size: 24px;
+  }
+  .portfolio-details .client-stat strong {
+    font-size: 24px;
+  }
+}
