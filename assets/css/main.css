@@ -1316,3 +1316,34 @@ a.side-card:hover { border-color: var(--border-strong); }
   .site-header, .site-footer, .page-glow, .page-grid, .no-print { display: none !important; }
   body { background: #fff; color: #111; }
 }
+
+/* ---------- College project (coral) ---------- */
+:root {
+  --coral: #ff9670;
+  --coral-soft: rgba(255, 150, 112, 0.12);
+  --coral-line: rgba(255, 150, 112, 0.38);
+}
+.eyebrow.coral { color: var(--coral); }
+.badge-college { background: var(--coral-soft); border-color: var(--coral-line); color: var(--coral); }
+.jump-nav a.is-coral .count { background: var(--coral-soft); color: var(--coral); }
+.card-kicker .kicker-coral { color: var(--coral); }
+.feature-card.is-college { border-color: var(--coral-line); }
+.feature-card.is-college::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(50% 60% at 100% 0%, rgba(255, 150, 112, 0.08), transparent 70%);
+}
+.feature-card.is-college:hover { border-color: rgba(255, 150, 112, 0.6); }
+.feature-card.is-college .feature-media {
+  background:
+    radial-gradient(80% 80% at 30% 100%, rgba(255, 150, 112, 0.12), transparent 70%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+}
+.feature-card.is-college .feature-client { color: var(--coral); }
+.feature-card.is-college .check-list .icon,
+.feature-card.is-college .media-note .icon { color: var(--coral); }
+.project-card.is-college .card-media { background: radial-gradient(90% 90% at 50% 100%, rgba(255, 150, 112, 0.12), transparent 70%); }
+.aside-card.is-coral { border-color: var(--coral-line); background: linear-gradient(180deg, rgba(255, 150, 112, 0.06), var(--surface) 70%); }
+.tl-item.is-coral::before { border-color: var(--coral); background: var(--coral); box-shadow: 0 0 0 5px var(--coral-soft); }
