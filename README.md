@@ -7,7 +7,7 @@ Personal portfolio of **Varinder Singh**, full-stack developer and B.C.A. studen
 ## What's inside
 
 - **Client work** — [Premium Cakes](portfolio-details-premium-cakes.html), a production online ordering platform built and sold to Well Baked Bakery ([live site](https://chandigarhcakeclub.club/)).
-- **Learning projects** — six full-stack apps (the Business Growth Agent series and the ARIA AI agent), each with a case study.
+- **Learning projects** — seven full-stack apps (the Business Growth Agent series, the JS Autos EV dealership site and the ARIA AI agent), each with a case study.
 - **Resume** — web version plus a one-page PDF in `assets/Varinder-Singh-Resume.pdf`.
 
 ## How it's built

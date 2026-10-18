@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JS Autos — EV dealership website — Varinder Singh</title>
+  <meta name="description" content="A multi-page website for an electric-scooter dealership with four showrooms in Punjab — a filterable model catalog, online test-ride booking, a petrol-vs-electric savings calculator and an admin panel.">
+  <meta name="author" content="Varinder Singh">
+  <meta name="theme-color" content="#090c13">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Varinder Singh">
+  <meta property="og:title" content="JS Autos — EV dealership website — Varinder Singh">
+  <meta property="og:description" content="A multi-page website for an electric-scooter dealership with four showrooms in Punjab — a filterable model catalog, online test-ride booking, a petrol-vs-electric savings calculator and an admin panel.">
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-glow" aria-hidden="true"></div>
+  <div class="page-grid" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Varinder Singh — home">
+        <span class="brand-mark" aria-hidden="true">VS</span>
+        <span><span class="brand-name">Varinder Singh</span><span class="brand-role">Full-stack developer</span></span>
+      </a>
+      <nav id="site-nav" class="nav" aria-label="Main">
+        <a href="portfolio.html" aria-current="page">Work</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <a href="mailto:varindersinghofficial338@gmail.com?subject=Hello%20Varinder" class="btn btn-primary nav-mobile-cta"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg> Email me</a>
+      </nav>
+      <div class="header-actions">
+        <a class="icon-btn" href="https://github.com/VarinderSingh68" target="_blank" rel="noopener" aria-label="GitHub profile"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+        <a class="btn btn-primary btn-sm header-cta" href="contact.html">Let&rsquo;s talk <svg class="icon icon-shift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        <button class="icon-btn nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+          <span class="i-menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg></span><span class="i-close" style="display:none"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="case-hero">
+      <div class="container">
+        <nav class="breadcrumb reveal" aria-label="Breadcrumb"><a href="portfolio.html">Work</a><span class="sep">/</span><a href="portfolio.html#learning">Learning projects</a><span class="sep">/</span><span>JS Autos</span></nav>
+        <div class="badges reveal"><span class="badge badge-accent"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg> Learning project</span><span class="badge">EV dealership</span><span class="badge badge-live"><span class="dot"></span> Live demo</span></div>
+        <h1 class="reveal reveal-d1">JS Autos — EV dealership website</h1>
+        <p class="lead reveal reveal-d2">A multi-page website for an electric-scooter dealership with four showrooms in Punjab — a filterable model catalog, online test-ride booking, a petrol-vs-electric savings calculator and an admin panel.</p>
+        <dl class="case-meta reveal reveal-d3">
+          <div><dt>Role</dt><dd>Design &amp; full-stack development</dd></div>
+          <div><dt>Type</dt><dd>Learning project</dd></div>
+          <div><dt>Stack</dt><dd>PHP, Bootstrap 5, Vanilla JS, Custom CSS</dd></div>
+          <div><dt>Links</dt><dd><a href="https://jsautos.infinityfreeapp.com/" target="_blank" rel="noopener">Live demo <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="case-cover">
+      <div class="container reveal">
+        <button type="button" data-lightbox="assets/img/work/jsautos-1.webp" data-caption="Homepage hero with range, experience and showroom stats" aria-label="Enlarge: Homepage hero with range, experience and showroom stats" style="display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in"><div class="frame "><div class="frame-bar"><span class="frame-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="frame-url">jsautos.infinityfreeapp.com</span></div><div class="frame-img"><img src="assets/img/work/jsautos-1.webp" alt="JS Autos — Homepage hero with range, experience and showroom stats" width="1440" height="900" loading="eager" decoding="async"></div></div></button>
+      </div>
+    </section>
+
+    <section class="section" style="border-top:0;padding-top:64px">
+      <div class="container case-layout">
+        <div class="prose">
+          <h2 class="reveal">Overview</h2>
+          <div class="reveal"><p>JS Autos is a complete website for an electric-scooter dealership with showrooms in Mohali, Kharar, Badali and Sirhind. It moves a walk-in, phone-call business online: customers can browse every model, compare specs, work out how much they’d save, and book a test ride at the showroom nearest to them.</p><p>It’s rendered with <strong>PHP</strong> on the server and made interactive with <strong>vanilla JavaScript</strong> — no front-end framework — using Bootstrap 5 for the grid and a hand-written design system on top. Each model page is rendered from its ID, and the booking and enquiry forms post to dedicated PHP endpoints protected by <strong>CSRF tokens and a honeypot field</strong> to keep spam bots out.</p></div>
+
+          <h2 class="reveal">What I built</h2>
+          <div class="feature-grid reveal"><div class="feature-tile"><span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg></span><h3>Filterable catalog</h3><p>10 models across City and Premium series, with category tabs, live search and sorting.</p></div><div class="feature-tile"><span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 2v3"/><path d="M16 2v3"/><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="m9 15 2 2 4-4"/></svg></span><h3>Test-ride booking</h3><p>A booking modal pre-selects the model, then asks for showroom, date and a preferred time slot.</p></div><div class="feature-tile"><span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z"/></svg></span><h3>Savings calculator</h3><p>Sliders for daily distance, petrol price, mileage and electricity rate show monthly, yearly and 5-year savings.</p></div><div class="feature-tile"><span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg></span><h3>Detailed model pages</h3><p>An image gallery, key specs, a full specification table and similar-model suggestions for every scooter.</p></div><div class="feature-tile"><span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Spam-resistant forms</h3><p>Booking and enquiry endpoints check a CSRF token and a hidden honeypot field before accepting a submission.</p></div><div class="feature-tile"><span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg></span><h3>Admin panel</h3><p>A separate admin area behind a CSRF-protected email and password sign-in.</p></div></div>
+
+          <h2 class="reveal">What this project shows</h2>
+          <ul class="check-list reveal"><li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span>A server-rendered, multi-page PHP site with clean, ID-based model pages</span></li><li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span>Interactive UI in plain JavaScript — filters, modals, animated counters and a live calculator</span></li><li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span>Form security basics: CSRF tokens, honeypot spam protection and server-side endpoints</span></li><li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span>Conversion details for a local business: WhatsApp click-to-chat, tap-to-call and embedded Google Maps</span></li></ul>
+
+          <h2 class="reveal">Screenshots</h2>
+          <div class="gallery">
+            <figure class="reveal">
+              <button type="button" data-lightbox="assets/img/work/jsautos-2.webp" data-caption="Model catalog with series filters, live search and sorting" aria-label="Enlarge: Model catalog with series filters, live search and sorting"><div class="frame "><div class="frame-bar"><span class="frame-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="frame-url" aria-hidden="true"></span></div><div class="frame-img"><img src="assets/img/work/jsautos-2.webp" alt="Model catalog with series filters, live search and sorting" width="1440" height="900" loading="lazy" decoding="async"></div></div></button>
+              <figcaption>Model catalog with series filters, live search and sorting</figcaption>
+            </figure>
+            <figure class="reveal">
+              <button type="button" data-lightbox="assets/img/work/jsautos-3.webp" data-caption="Test-ride booking: model, showroom, date and time slot" aria-label="Enlarge: Test-ride booking: model, showroom, date and time slot"><div class="frame "><div class="frame-bar"><span class="frame-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="frame-url" aria-hidden="true"></span></div><div class="frame-img"><img src="assets/img/work/jsautos-3.webp" alt="Test-ride booking: model, showroom, date and time slot" width="1440" height="900" loading="lazy" decoding="async"></div></div></button>
+              <figcaption>Test-ride booking: model, showroom, date and time slot</figcaption>
+            </figure>
+            <figure class="reveal">
+              <button type="button" data-lightbox="assets/img/work/jsautos-4.webp" data-caption="Savings calculator comparing petrol and electric running costs" aria-label="Enlarge: Savings calculator comparing petrol and electric running costs"><div class="frame "><div class="frame-bar"><span class="frame-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="frame-url" aria-hidden="true"></span></div><div class="frame-img"><img src="assets/img/work/jsautos-4.webp" alt="Savings calculator comparing petrol and electric running costs" width="1440" height="900" loading="lazy" decoding="async"></div></div></button>
+              <figcaption>Savings calculator comparing petrol and electric running costs</figcaption>
+            </figure>
+            <figure class="reveal">
+              <button type="button" data-lightbox="assets/img/work/jsautos-5.webp" data-caption="Model page with gallery, key specs and full specification table" aria-label="Enlarge: Model page with gallery, key specs and full specification table"><div class="frame "><div class="frame-bar"><span class="frame-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="frame-url" aria-hidden="true"></span></div><div class="frame-img"><img src="assets/img/work/jsautos-5.webp" alt="Model page with gallery, key specs and full specification table" width="1440" height="900" loading="lazy" decoding="async"></div></div></button>
+              <figcaption>Model page with gallery, key specs and full specification table</figcaption>
+            </figure>
+            <figure class="reveal">
+              <button type="button" data-lightbox="assets/img/work/jsautos-6.webp" data-caption="Mobile-first layout: home, catalog and savings calculator" aria-label="Enlarge: Mobile-first layout: home, catalog and savings calculator"><div class="frame "><div class="frame-bar"><span class="frame-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="frame-url" aria-hidden="true"></span></div><div class="frame-img"><img src="assets/img/work/jsautos-6.webp" alt="Mobile-first layout: home, catalog and savings calculator" width="1440" height="900" loading="lazy" decoding="async"></div></div></button>
+              <figcaption>Mobile-first layout: home, catalog and savings calculator</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <aside class="aside">
+            <div class="aside-card">
+              <h3>At a glance</h3>
+              <dl>
+                <div><dt>Category</dt><dd>EV dealership</dd></div>
+                <div><dt>Built with</dt><dd><div class="tags"><span class="tag">PHP</span><span class="tag">Bootstrap 5</span><span class="tag">Vanilla JS</span><span class="tag">Custom CSS</span></div></dd></div>
+              </dl>
+            </div>
+            <div class="aside-card is-demo">
+              <h3>Try the demo</h3>
+              
+              <a class="btn btn-primary" href="https://jsautos.infinityfreeapp.com/" target="_blank" rel="noopener" style="margin-top:0">Open live demo <svg class="icon icon-diag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+              <p class="fine">Free hosting &mdash; the first load can take up to a minute.</p>
+            </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-tight" style="padding-top:0">
+      <div class="container">
+        <a class="next-project reveal" href="portfolio-details-petshop.html">
+          <div><span>Next project</span><strong>Pet Shop Business Growth Agent</strong></div>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <section class="footer-cta">
+      <div class="container">
+        <div class="cta reveal">
+          <div class="cta-inner">
+            <div>
+              <span class="eyebrow">Open to work</span>
+              <h2>Hiring an intern, or need a site that runs your business?</h2>
+              <p>I&rsquo;m available for internships, entry-level roles and freelance projects. Tell me what you&rsquo;re building &mdash; I reply within 24&ndash;48 hours.</p>
+            </div>
+            <div class="btn-row">
+              <a class="btn btn-primary btn-lg" href="mailto:varindersinghofficial338@gmail.com?subject=Hello%20Varinder"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg> Email me</a>
+              <a class="btn btn-ghost btn-lg" href="assets/Varinder-Singh-Resume.pdf" download><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg> Resume</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Varinder Singh &middot; Designed and hand-coded in HTML, CSS &amp; JavaScript.</span>
+        <div class="footer-links">
+          <a href="portfolio.html">Work</a>
+          <a href="about.html">About</a>
+          <a href="resume.html">Resume</a>
+          <a href="contact.html">Contact</a>
+          <span class="footer-social">
+            <a class="icon-btn" href="https://github.com/VarinderSingh68" target="_blank" rel="noopener" aria-label="GitHub profile"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+            <a class="icon-btn" href="mailto:varindersinghofficial338@gmail.com?subject=Hello%20Varinder" aria-label="Email Varinder"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
