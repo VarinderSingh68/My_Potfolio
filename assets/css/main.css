@@ -1347,3 +1347,136 @@ a.side-card:hover { border-color: var(--border-strong); }
 .project-card.is-college .card-media { background: radial-gradient(90% 90% at 50% 100%, rgba(255, 150, 112, 0.12), transparent 70%); }
 .aside-card.is-coral { border-color: var(--coral-line); background: linear-gradient(180deg, rgba(255, 150, 112, 0.06), var(--surface) 70%); }
 .tl-item.is-coral::before { border-color: var(--coral); background: var(--coral); box-shadow: 0 0 0 5px var(--coral-soft); }
+
+/* ---------- Mobile application (purple/violet) ---------- */
+:root {
+  --purple: #a78bfa;
+  --purple-strong: #c4b5fd;
+  --purple-soft: rgba(167, 139, 250, 0.14);
+  --purple-line: rgba(167, 139, 250, 0.4);
+}
+.eyebrow.purple { color: var(--purple); }
+.badge-mobile { background: var(--purple-soft); border-color: var(--purple-line); color: var(--purple-strong); }
+.jump-nav a.is-purple .count { background: var(--purple-soft); color: var(--purple-strong); }
+.jump-nav a.is-purple:hover { border-color: var(--purple-line); }
+.card-kicker .kicker-purple { color: var(--purple); }
+.feature-card.is-mobile { border-color: var(--purple-line); }
+.feature-card.is-mobile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(50% 60% at 100% 0%, rgba(167, 139, 250, 0.1), transparent 70%);
+}
+.feature-card.is-mobile:hover { border-color: rgba(167, 139, 250, 0.65); }
+.feature-card.is-mobile .feature-media {
+  background:
+    radial-gradient(80% 80% at 30% 100%, rgba(167, 139, 250, 0.16), transparent 70%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+}
+.feature-card.is-mobile .feature-client { color: var(--purple); }
+.feature-card.is-mobile .check-list .icon,
+.feature-card.is-mobile .media-note .icon { color: var(--purple); }
+.project-card.is-mobile .card-media { background: radial-gradient(90% 90% at 50% 100%, rgba(167, 139, 250, 0.14), transparent 70%); }
+.aside-card.is-purple { border-color: var(--purple-line); background: linear-gradient(180deg, rgba(167, 139, 250, 0.08), var(--surface) 70%); }
+.tl-item.is-purple::before { border-color: var(--purple); background: var(--purple); box-shadow: 0 0 0 5px var(--purple-soft); }
+
+/* Mobile application showcase & multi-phone layouts */
+.phones-pair {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+}
+.phone-mockup {
+  position: relative;
+  flex: 1 1 0;
+  max-width: 215px;
+  border-radius: 26px;
+  background: #141824;
+  border: 1px solid var(--border-strong);
+  padding: 6px;
+  box-shadow: 0 25px 60px -20px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(0, 0, 0, 0.4);
+  transition: transform 0.5s var(--ease), box-shadow 0.4s, border-color 0.3s;
+}
+.phone-mockup img {
+  width: 100%;
+  aspect-ratio: 460 / 1024;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+.phone-mockup.primary {
+  transform: translateY(-6px) scale(1.02);
+  z-index: 2;
+  border-color: var(--purple-line);
+  box-shadow: 0 30px 70px -20px rgba(167, 139, 250, 0.25), 0 0 0 1px rgba(167, 139, 250, 0.3);
+}
+.phone-mockup.secondary {
+  transform: translateY(10px) scale(0.96);
+  opacity: 0.9;
+}
+.feature-card:hover .phone-mockup.primary {
+  transform: translateY(-12px) scale(1.04);
+}
+.feature-card:hover .phone-mockup.secondary {
+  transform: translateY(4px) scale(0.98);
+  opacity: 1;
+}
+
+/* Phone Galleries on Case Study */
+.gallery-phones {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.phone-card {
+  margin: 0;
+}
+.phone-frame {
+  background: #141824;
+  border: 1px solid var(--border-strong);
+  border-radius: 26px;
+  padding: 6px;
+  box-shadow: 0 20px 50px -15px rgba(0, 0, 0, 0.7);
+  transition: transform 0.4s var(--ease), border-color 0.3s, box-shadow 0.4s;
+  max-width: 320px;
+  margin: 0 auto;
+}
+.phone-frame:hover {
+  transform: translateY(-4px);
+  border-color: var(--purple-line);
+  box-shadow: 0 25px 60px -20px rgba(167, 139, 250, 0.2);
+}
+.phone-frame img {
+  width: 100%;
+  aspect-ratio: 460 / 1024;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+@media (max-width: 880px) {
+  .gallery-phones {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 540px) {
+  .gallery-phones {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .phones-pair {
+    gap: 10px;
+  }
+  .phone-mockup {
+    max-width: 160px;
+    border-radius: 20px;
+    padding: 4px;
+  }
+  .phone-mockup img {
+    border-radius: 16px;
+  }
+}

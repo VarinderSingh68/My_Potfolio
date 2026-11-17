@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Mock Interviewer — Android app &amp; Cloudflare Worker — Varinder Singh</title>
+  <meta name="description" content="AI Mock Interviewer is an Android app (Kotlin/Compose) that runs realistic mock interviews with Gemini AI scoring, on-device voice transcription, Cloudflare Workers &amp; D1 backend, and a browser demo.">
+  <meta name="author" content="Varinder Singh">
+  <meta name="theme-color" content="#090c13">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Varinder Singh">
+  <meta property="og:title" content="AI Mock Interviewer — Android app &amp; Cloudflare Worker — Varinder Singh">
+  <meta property="og:description" content="AI Mock Interviewer is an Android app (Kotlin/Compose) that runs realistic mock interviews with Gemini AI scoring, on-device voice transcription, Cloudflare Workers &amp; D1 backend, and a browser demo.">
+  <meta property="og:image" content="assets/img/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-glow" aria-hidden="true"></div>
+  <div class="page-grid" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Varinder Singh — home">
+        <span class="brand-mark" aria-hidden="true">VS</span>
+        <span><span class="brand-name">Varinder Singh</span><span class="brand-role">Full-stack developer</span></span>
+      </a>
+      <nav id="site-nav" class="nav" aria-label="Main">
+        <a href="portfolio.html" aria-current="page">Work</a>
+        <a href="about.html">About</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+        <a href="mailto:varindersinghofficial338@gmail.com?subject=Hello%20Varinder" class="btn btn-primary nav-mobile-cta"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg> Email me</a>
+      </nav>
+      <div class="header-actions">
+        <a class="icon-btn" href="https://github.com/VarinderSingh68" target="_blank" rel="noopener" aria-label="GitHub profile"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+        <a class="btn btn-primary btn-sm header-cta" href="contact.html">Let&rsquo;s talk <svg class="icon icon-shift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+        <button class="icon-btn nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+          <span class="i-menu"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg></span><span class="i-close" style="display:none"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="case-hero">
+      <div class="container">
+        <nav class="breadcrumb reveal" aria-label="Breadcrumb"><a href="portfolio.html">Work</a><span class="sep">/</span><a href="portfolio.html#mobile">Mobile application</a><span class="sep">/</span><span>AI Mock Interviewer</span></nav>
+        <div class="badges reveal">
+          <span class="badge badge-mobile"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg> Mobile application</span>
+          <span class="badge">Android &middot; Kotlin &middot; Compose</span>
+          <span class="badge">Gemini AI</span>
+          <span class="badge badge-live"><span class="dot"></span> Live demo &amp; APK</span>
+        </div>
+        <h1 class="reveal reveal-d1">AI Mock Interviewer &mdash; Android app &amp; Cloudflare Worker</h1>
+        <p class="lead reveal reveal-d2">A realistic mock interview Android app built with Kotlin and Jetpack Compose. Pick your role, round and experience level, answer questions by voice or text, and receive dimension-based scoring on communication, confidence and technical depth via Gemini &mdash; with a built-in scoring engine fallback that never breaks.</p>
+        <dl class="case-meta reveal reveal-d3">
+          <div><dt>Role</dt><dd>Mobile UI design, Android development &amp; backend engineering</dd></div>
+          <div><dt>Platform</dt><dd>Android (Kotlin &amp; Jetpack Compose) + Cloudflare Worker (Edge)</dd></div>
+          <div><dt>Stack</dt><dd>Kotlin, Compose, Gemini AI, Cloudflare Worker, D1 SQLite, Speech-to-Text</dd></div>
+          <div><dt>Links</dt><dd><a href="https://ai-mock-interview-api.varinder-dev.workers.dev" target="_blank" rel="noopener">Try browser demo <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a> &middot; <a href="https://ai-mock-interview-api.varinder-dev.workers.dev/ai-mock-interview.apk" download>Download APK <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg></a></dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="case-cover">
+      <div class="container reveal">
+        <div class="phones-pair" style="padding: 18px 0;">
+          <div class="phone-mockup secondary">
+            <button type="button" data-lightbox="assets/img/work/mock-interview-home.jpg" data-caption="AI Mock Interviewer — Dashboard &amp; Role Selection" aria-label="Enlarge: Dashboard &amp; Role Selection" style="display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in">
+              <img src="assets/img/work/mock-interview-home.jpg" alt="AI Mock Interviewer — Dashboard &amp; Role Selection" width="460" height="1024" loading="eager" decoding="async">
+            </button>
+          </div>
+          <div class="phone-mockup primary">
+            <button type="button" data-lightbox="assets/img/work/mock-interview-live.jpg" data-caption="AI Mock Interviewer — Live Voice Interview Session" aria-label="Enlarge: Live Voice Interview Session" style="display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in">
+              <img src="assets/img/work/mock-interview-live.jpg" alt="AI Mock Interviewer — Live Voice Interview Session" width="460" height="1024" loading="eager" decoding="async">
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="border-top:0;padding-top:64px">
+      <div class="container case-layout">
+        <div class="prose">
+          <h2 class="reveal">Overview</h2>
+          <div class="reveal">
+            <p><strong>AI Mock Interviewer</strong> is an Android application built with <strong>Kotlin and Jetpack Compose</strong> that delivers realistic, interactive mock interview sessions tailored to modern tech hiring. Candidates select their target discipline (Software Developer, Android Developer, Backend, Frontend, Data Scientist, DevOps Engineer, QA Engineer, or Product Manager), choose their round (Full loop, HR, Technical, Design), and define their experience level from Fresher to Senior.</p>
+            <p>Interviews can be taken entirely hands-free using <strong>on-device voice transcription</strong> with real-time waveform visualization, or answered via text input. For maximum privacy, voice answers are transcribed locally on the device and audio is never retained on any server.</p>
+            <p>Each response is scored across three critical dimensions: <strong>communication clarity</strong>, <strong>spoken confidence</strong>, and <strong>technical depth</strong> using <strong>Google Gemini AI</strong>. To ensure the app is bulletproof in production, it implements a dual-engine architecture: if Gemini or the network is ever unreachable or rate-limited, a deterministic built-in scoring engine seamlessly takes over so interviews never fail or stall mid-question.</p>
+            <p>Behind the scenes, a lightweight <strong>Cloudflare Worker paired with a Cloudflare D1 (serverless SQLite) database</strong> plans question sequences, dynamically deploys follow-up probes when an answer is thin, and optionally customizes questions to match a pasted job description with gap detection. A full <strong>browser demo of the exact same flow</strong> runs at the same URL so anyone can try it without installing anything, and the 14&nbsp;MB Android APK is directly downloadable right from that page.</p>
+          </div>
+
+          <h2 class="reveal">What I built</h2>
+          <div class="feature-grid reveal">
+            <div class="feature-tile">
+              <span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg></span>
+              <h3>Native Jetpack Compose UI</h3>
+              <p>A fluid dark interface designed with Material 3 principles, interactive role grid cards, custom robot interviewer avatars, round toggles, and smooth state transitions.</p>
+            </div>
+            <div class="feature-tile">
+              <span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" x2="12" y1="19" y2="22"/></svg></span>
+              <h3>Voice &amp; Text Answering</h3>
+              <p>Practice speaking out loud with tap-to-talk microphone controls and live audio waveform animation. Transcription runs on-device, preserving user privacy with zero audio retained.</p>
+            </div>
+            <div class="feature-tile">
+              <span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/><path d="M20 2v4"/><path d="M22 4h-4"/><circle cx="4" cy="20" r="2"/></svg></span>
+              <h3>Dual-Engine Scoring Architecture</h3>
+              <p>Evaluates answers on communication, confidence, and technical depth with Gemini AI &mdash; falling back automatically to an internal deterministic engine if offline so sessions never crash.</p>
+            </div>
+            <div class="feature-tile">
+              <span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></span>
+              <h3>Adaptive Follow-up Probing</h3>
+              <p>When a candidate provides a brief or thin answer, the engine dynamically interjects a targeted follow-up question to test practical knowledge and depth under pressure.</p>
+            </div>
+            <div class="feature-tile">
+              <span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></span>
+              <h3>Tailored to Job Descriptions</h3>
+              <p>Paste any job vacancy text to trigger specialized question planning aligned with the role requirements, followed by an automated gap analysis highlighting missed concepts.</p>
+            </div>
+            <div class="feature-tile">
+              <span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg></span>
+              <h3>Cloudflare Worker &amp; D1 Database</h3>
+              <p>Fast global edge routing, tokenized guest and authenticated sessions, and persistent interview state backed by serverless SQLite on Cloudflare D1.</p>
+            </div>
+            <div class="feature-tile">
+              <span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></span>
+              <h3>Detailed Feedback Reports</h3>
+              <p>Comprehensive end-of-interview report with per-dimension breakdowns, &ldquo;What stood out&rdquo; insights, constructive improvement suggestions, and actionable pro-tips.</p>
+            </div>
+            <div class="feature-tile">
+              <span class="cap-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg></span>
+              <h3>Instant Web Demo &amp; Direct APK</h3>
+              <p>Zero-barrier evaluation: a responsive web demo runs the complete 3-question interview flow directly in any browser, while the 14 MB native Android APK can be side-loaded anytime.</p>
+            </div>
+          </div>
+
+          <h2 class="reveal">What this project shows</h2>
+          <ul class="check-list reveal">
+            <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><strong>Native Android engineering:</strong> Built in modern Kotlin with Jetpack Compose declarative UI, coroutines for asynchronous IO, and clean separation between UI state and network requests.</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><strong>Fail-safe AI architecture:</strong> Graceful degradation strategy using Gemini API for deep contextual assessment with a deterministic scoring engine fallback so the user experience is never interrupted.</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><strong>Privacy-conscious audio pipeline:</strong> Audio is transcribed locally on the Android device; only text transcripts are transmitted for assessment, ensuring zero sensitive audio is stored.</span></li>
+            <li><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="m16 9-5.5 5.5L8 12"/></svg><span><strong>Edge infrastructure &amp; serverless SQL:</strong> Powered by Cloudflare Workers and D1 database for sub-100ms response times worldwide, dynamic prompt orchestration, and session history management.</span></li>
+          </ul>
+
+          <h2 class="reveal">Screenshots</h2>
+          <div class="gallery-phones">
+            <figure class="phone-card reveal">
+              <button type="button" data-lightbox="assets/img/work/mock-interview-live.jpg" data-caption="Live Voice Interview: AI avatar, question card, audio waveform visualizer and mic controls" aria-label="Enlarge: Live Voice Interview">
+                <div class="phone-frame">
+                  <img src="assets/img/work/mock-interview-live.jpg" alt="AI Mock Interviewer — Live Voice Interview screen" width="460" height="1024" loading="lazy" decoding="async">
+                </div>
+              </button>
+              <figcaption>Live voice interview: speech transcription, waveform and timer</figcaption>
+            </figure>
+            <figure class="phone-card reveal reveal-d1">
+              <button type="button" data-lightbox="assets/img/work/mock-interview-home.jpg" data-caption="Home Dashboard: Role selector across Software, Backend, Android, Frontend, DevOps and Data Science" aria-label="Enlarge: Home Dashboard">
+                <div class="phone-frame">
+                  <img src="assets/img/work/mock-interview-home.jpg" alt="AI Mock Interviewer — Dashboard &amp; Role Selector" width="460" height="1024" loading="lazy" decoding="async">
+                </div>
+              </button>
+              <figcaption>Dashboard: popular role selection and new interview launcher</figcaption>
+            </figure>
+            <figure class="phone-card reveal reveal-d2">
+              <button type="button" data-lightbox="assets/img/work/mock-interview-options.jpg" data-caption="Interview Setup &amp; Progress: Round selector (Full loop, HR, Technical, Design), JD tailor tool, and drill stats" aria-label="Enlarge: Interview Setup &amp; Progress">
+                <div class="phone-frame">
+                  <img src="assets/img/work/mock-interview-options.jpg" alt="AI Mock Interviewer — Interview Options &amp; Analytics" width="460" height="1024" loading="lazy" decoding="async">
+                </div>
+              </button>
+              <figcaption>Interview customization, Job Description tailoring &amp; progress tracker</figcaption>
+            </figure>
+            <figure class="phone-card reveal">
+              <button type="button" data-lightbox="assets/img/work/mock-interview-profile.jpg" data-caption="User Profile &amp; Settings: History, voice toggle, daily reminders and premium tier options" aria-label="Enlarge: User Profile &amp; Settings">
+                <div class="phone-frame">
+                  <img src="assets/img/work/mock-interview-profile.jpg" alt="AI Mock Interviewer — User Profile" width="460" height="1024" loading="lazy" decoding="async">
+                </div>
+              </button>
+              <figcaption>Candidate profile, voice settings, history log &amp; premium options</figcaption>
+            </figure>
+            <figure class="phone-card reveal reveal-d1">
+              <button type="button" data-lightbox="assets/img/work/mock-interview-login.png" data-caption="Authentication Screen: Salted and hashed credentials with Google Sign-In" aria-label="Enlarge: Authentication Screen">
+                <div class="phone-frame">
+                  <img src="assets/img/work/mock-interview-login.png" alt="AI Mock Interviewer — Sign In Screen" width="460" height="1024" loading="lazy" decoding="async">
+                </div>
+              </button>
+              <figcaption>Welcome screen: hashed authentication &amp; Google sign-in</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <aside class="aside">
+          <div class="aside-card">
+            <h3>At a glance</h3>
+            <dl>
+              <div><dt>Platform</dt><dd>Native Android App &amp; Web</dd></div>
+              <div><dt>Mobile Tech</dt><dd>Kotlin, Jetpack Compose, Material 3</dd></div>
+              <div><dt>AI Model</dt><dd>Google Gemini API (with deterministic fallback)</dd></div>
+              <div><dt>Backend</dt><dd>Cloudflare Worker (Edge API)</dd></div>
+              <div><dt>Database</dt><dd>Cloudflare D1 (Serverless SQLite)</dd></div>
+              <div><dt>Voice Engine</dt><dd>On-device Speech Recognition</dd></div>
+            </dl>
+          </div>
+          <div class="aside-card is-purple">
+            <h3>Try it or install it</h3>
+            <div style="display:flex;flex-direction:column;gap:10px;margin-top:16px;">
+              <a class="btn btn-primary" href="https://ai-mock-interview-api.varinder-dev.workers.dev" target="_blank" rel="noopener">Open browser demo <svg class="icon icon-diag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a>
+              <a class="btn btn-ghost" href="https://ai-mock-interview-api.varinder-dev.workers.dev/ai-mock-interview.apk" download><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg> Download Android APK</a>
+            </div>
+            <p class="fine">The browser demo runs the complete mock interview flow with guest session tokens directly in your browser. Android users can download the debug APK (14 MB) to test native voice answering on any device.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section-tight" style="padding-top:0">
+      <div class="container">
+        <a class="next-project reveal" href="portfolio-details-placement-lms.html">
+          <div><span>Next project</span><strong>GJIMT Placement LMS — college placement portal</strong></div>
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <section class="footer-cta">
+      <div class="container">
+        <div class="cta reveal">
+          <div class="cta-inner">
+            <div>
+              <span class="eyebrow">Open to work</span>
+              <h2>Hiring an intern, or need a site that runs your business?</h2>
+              <p>I&rsquo;m available for internships, entry-level roles and freelance projects. Tell me what you&rsquo;re building &mdash; I reply within 24&ndash;48 hours.</p>
+            </div>
+            <div class="btn-row">
+              <a class="btn btn-primary btn-lg" href="mailto:varindersinghofficial338@gmail.com?subject=Hello%20Varinder"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg> Email me</a>
+              <a class="btn btn-ghost btn-lg" href="assets/Varinder-Singh-Resume.pdf" download><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/></svg> Resume</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <div class="footer-bottom">
+        <span>&copy; <span data-year>2026</span> Varinder Singh &middot; Designed and hand-coded in HTML, CSS &amp; JavaScript.</span>
+        <div class="footer-links">
+          <a href="portfolio.html">Work</a>
+          <a href="about.html">About</a>
+          <a href="resume.html">Resume</a>
+          <a href="contact.html">Contact</a>
+          <span class="footer-social">
+            <a class="icon-btn" href="https://github.com/VarinderSingh68" target="_blank" rel="noopener" aria-label="GitHub profile"><svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+            <a class="icon-btn" href="mailto:varindersinghofficial338@gmail.com?subject=Hello%20Varinder" aria-label="Email Varinder"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg></a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
